@@ -68,12 +68,15 @@ simpleReactor(
         pressure= (1.0,'bar'),
         nSims=12,
         initialMoleFractions={
+        "CH3F": [0.33, 1],
+        "O2": 1,
+        "N2": 3.76,
         #"CH3F": [0.5,1.0],
         #"O2": 1,
         #"N2": 3.46, 
-        "CH3F": 1,
-        "O2": 1.5,
-        "N2": 5.63,
+        #"CH3F": 1,
+        #"O2": 1.5,
+        #"N2": 5.63,
         },
         #terminationConversion={
         #'CH3F': 0.999,
