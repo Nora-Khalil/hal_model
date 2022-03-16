@@ -1,0 +1,127 @@
+:root:Removing old /home/khalil.nor/Code/projects/dv_hal_proj/dv_hal_proj/ch3f/RMG_backup.log
+:root:Moving /home/khalil.nor/Code/projects/dv_hal_proj/dv_hal_proj/ch3f/RMG.log to /home/khalil.nor/Code/projects/dv_hal_proj/dv_hal_proj/ch3f/RMG_backup.log
+
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=9.78936e-18): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=8.30526e-20): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.38146e-20): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=8.43874e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.11249e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.21453e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.27525e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=3.80514e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.20577e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.62058e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.48763e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.43693e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.36527e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.25118e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=7.6711e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.62934e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.03508e-23): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.4588e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.64742e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.83565e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.18119e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.0398e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.86311e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.10918e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.26998e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/Code/RMG-Py/rmgpy/thermo/thermoengine.py:98: LinAlgWarning: Ill-conditioned matrix (rcond=1.26998e-22): result may not be accurate.
+  thermo = wilhoit.to_nasa(Tmin=100.0, Tmax=5000.0, Tint=1000.0)
+/home/khalil.nor/Code/RMG-Py/rmgpy/thermo/thermoengine.py:98: LinAlgWarning: Ill-conditioned matrix (rcond=1.08139e-22): result may not be accurate.
+  thermo = wilhoit.to_nasa(Tmin=100.0, Tmax=5000.0, Tint=1000.0)
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: invalid value encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: divide by zero encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:1014: RuntimeWarning: invalid value encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: invalid value encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: divide by zero encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:1014: RuntimeWarning: invalid value encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: invalid value encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/Code/RMG-Py/rmgpy/rmg/main.py:925: RuntimeWarning: divide by zero encountered in true_divide
+  conditions=self.rmg_memories[index].get_cond()
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=9.78936e-18): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=8.30526e-20): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.38146e-20): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=8.43874e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.11249e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.21453e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.27525e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=3.80514e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.20577e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.62058e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.48763e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.43693e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.36527e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.25118e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=7.6711e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.62934e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.03508e-23): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.4588e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.64742e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.83565e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.18119e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.0398e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=2.86311e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=4.10918e-21): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/.conda/envs/rmg_env/lib/python3.7/site-packages/scipy/optimize/optimize.py:1978: LinAlgWarning: Ill-conditioned matrix (rcond=1.26998e-22): result may not be accurate.
+  fu = func(x, *args)
+/home/khalil.nor/Code/RMG-Py/rmgpy/thermo/thermoengine.py:98: LinAlgWarning: Ill-conditioned matrix (rcond=1.26998e-22): result may not be accurate.
+  thermo = wilhoit.to_nasa(Tmin=100.0, Tmax=5000.0, Tint=1000.0)
+/home/khalil.nor/Code/RMG-Py/rmgpy/thermo/thermoengine.py:98: LinAlgWarning: Ill-conditioned matrix (rcond=1.08139e-22): result may not be accurate.
+  thermo = wilhoit.to_nasa(Tmin=100.0, Tmax=5000.0, Tint=1000.0)
