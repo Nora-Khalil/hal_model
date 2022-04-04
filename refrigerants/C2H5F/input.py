@@ -29,8 +29,8 @@ thermolibs_Creg = [
 
 database(
 thermoLibraries = thermolibs,
-reactionLibraries = ['halogens_pdep'],
-seedMechanisms = ['FFCM1(-)'],
+reactionLibraries = ['FFCM1(-)','halogens_pdep'],
+seedMechanisms = [],
 kineticsDepositories = ['training'],
 kineticsFamilies = ['default','halogens','Disproportionation-Y'],
 frequenciesLibraries = ['halogens_G4'],
@@ -67,7 +67,14 @@ species(
     reactive = True,
     structure = SMILES('C')
 )
-    
+
+species(
+    label = 'OH',
+    reactive = True,
+    structure = SMILES('[OH]')
+)
+ 
+   
 simpleReactor(
         temperature=[(1000,'K'),(2000,'K')],
         pressure= (1.0,'bar'),
@@ -83,14 +90,14 @@ simpleReactor(
         #terminationRateRatio=1e-4,
         #terminationTime=(10,'s'),
         terminationTime=(1,'s'),
-        #sensitivity=['C2H5F','OH'],
-        #sensitivityThreshold=0.001,
+        sensitivity=['C2H5F','OH'],
+        sensitivityThreshold=0.001,
         )
         
 model(
-    toleranceMoveToCore = 0.1,
-    toleranceInterruptSimulation = 0.1,
-    maximumEdgeSpecies = 3e5,
+ i   toleranceMoveToCore = 0.2,
+    toleranceInterruptSimulation = 0.2,
+    maximumEdgeSpecies = 5e5,
     filterReactions = True,
     filterThreshold = 5e8,
     minCoreSizeForPrune = 50,
@@ -117,7 +124,7 @@ simulator(
 generatedSpeciesConstraints(
     allowed=['input species','seed mechanisms','reaction libraries'],
     maximumCarbonAtoms=6,
-    maximumOxygenAtoms=4,
+    maximumOxygenAtoms=6,
     maximumRadicalElectrons=2,
     maximumSingletCarbenes=1,
     maximumCarbeneRadicals=0,

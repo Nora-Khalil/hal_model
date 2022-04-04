@@ -880,3 +880,49 @@ multiplicity 2
 7 H u0 p0 c0 {3,S}
 8 H u0 p0 c0 {4,S}
 
+[CH2]CC
+multiplicity 2
+1  C u0 p0 c0 {2,S} {3,S} {4,S} {5,S}
+2  C u0 p0 c0 {1,S} {6,S} {7,S} {8,S}
+3  C u1 p0 c0 {1,S} {9,S} {10,S}
+4  H u0 p0 c0 {1,S}
+5  H u0 p0 c0 {1,S}
+6  H u0 p0 c0 {2,S}
+7  H u0 p0 c0 {2,S}
+8  H u0 p0 c0 {2,S}
+9  H u0 p0 c0 {3,S}
+10 H u0 p0 c0 {3,S}
+
+O=C(O)F
+1 F u0 p3 c0 {4,S}
+2 O u0 p2 c0 {4,S} {5,S}
+3 O u0 p2 c0 {4,D}
+4 C u0 p0 c0 {1,S} {2,S} {3,D}
+5 H u0 p0 c0 {2,S}
+
+C=[C]O
+multiplicity 2
+1 O u0 p2 c0 {3,S} {6,S}
+2 C u0 p0 c0 {3,D} {4,S} {5,S}
+3 C u1 p0 c0 {1,S} {2,D}
+4 H u0 p0 c0 {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {1,S}
+
+F[C]CF
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {4,S}
+3 C u0 p0 c0 {1,S} {4,S} {5,S} {6,S}
+4 C u0 p1 c0 {2,S} {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+
+C=C[C]F-2
+1 F u0 p3 c0 {4,S}
+2 C u0 p0 c0 {3,D} {4,S} {5,S}
+3 C u0 p0 c0 {2,D} {6,S} {7,S}
+4 C u0 p1 c0 {1,S} {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+
