@@ -13,24 +13,13 @@ thermolibs = [
 'Fluorine',
 '2-BTP_G4',
 'thermo_DFT_CCSDTF12_BAC',
-'SulfurHaynes'
+'SulfurHaynes',
 ]
-
-thermolibs_Creg = [
-'primaryThermoLibrary',
-'FFCM1(-)',
-'DFT_QCI_thermo',
-]
-
-
-
-
-
 
 database(
 thermoLibraries = thermolibs,
-reactionLibraries = ['halogens_pdep'],
-seedMechanisms = ['FFCM1(-)'],
+reactionLibraries = ['FFCM1(-)','halogens_pdep'],
+seedMechanisms = [],
 kineticsDepositories = ['training'],
 kineticsFamilies = ['default','halogens','Disproportionation-Y'],
 frequenciesLibraries = ['halogens_G4'],
@@ -57,9 +46,9 @@ species(
 )
     
 species(
-    label = 'N2',
-    reactive = False,
-    structure = SMILES('N#N')
+    label = 'OH',
+    reactive = True,
+    structure = SMILES('[OH]')
 )
     
 species(
@@ -68,21 +57,26 @@ species(
     structure = SMILES('C')
 )
     
+species(
+    label = 'N2',
+    reactive = False,
+    structure = SMILES('N#N')
+)
+    
 simpleReactor(
         temperature=[(1000,'K'),(2000,'K')],
         pressure= (1.0,'bar'),
         nSims=12,
         initialMoleFractions={
-        "CH2F2": [0.5,1.0],
+        "CH2F2": 1,
         "O2": 1,
         "N2": 3.76,
         },
         # terminationConversion={
         # 'CH2F2': 0.999,
         # },
-        #terminationRateRatio=1e-4,
-        #terminationTime=(10,'s'),
-        terminationTime=(1,'s'),
+        terminationRateRatio=1e-8,
+        terminationTime=(.1,'s'),
         #sensitivity=['CH2F2','OH'],
         #sensitivityThreshold=0.001,
         )
@@ -90,21 +84,11 @@ simpleReactor(
 model(
     toleranceMoveToCore = 0.1,
     toleranceInterruptSimulation = 0.1,
-    maximumEdgeSpecies = 3e5,
+    maximumEdgeSpecies = 5e5,
     filterReactions = True,
     filterThreshold = 5e8,
     minCoreSizeForPrune = 50,
     minSpeciesExistIterationsForPrune = 4,
-)
-
-pressureDependence(
-    method='modified strong collision',
-    maximumGrainSize=(0.5,'kcal/mol'),
-    minimumNumberOfGrains=250,
-    temperatures=(300,2500,'K',8),
-    pressures=(0.01,100,'bar',5),
-    interpolation=('Chebyshev', 6, 4),
-    maximumAtoms=16,
 )
 
 simulator(
@@ -118,10 +102,21 @@ generatedSpeciesConstraints(
     allowed=['input species','seed mechanisms','reaction libraries'],
     maximumCarbonAtoms=4,
     maximumOxygenAtoms=4,
+    #maximumHeavyAtoms=24,
     maximumRadicalElectrons=2,
     maximumSingletCarbenes=1,
     maximumCarbeneRadicals=0,
     allowSingletO2 = True,
+)
+
+pressureDependence(
+    method='modified strong collision',
+    maximumGrainSize=(0.5,'kcal/mol'),
+    minimumNumberOfGrains=250,
+    temperatures=(300,2500,'K',8),
+    pressures=(0.01,100,'bar',5),
+    interpolation=('Chebyshev', 6, 4),
+    #maximumAtoms=16,
 )
 
 options(

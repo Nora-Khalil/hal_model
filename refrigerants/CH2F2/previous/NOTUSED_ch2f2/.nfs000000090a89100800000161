@@ -1,0 +1,2 @@
+/home/khalil.nor/.conda/envs/cantera_env/lib/python3.9/site-packages/cantera/onedim.py:309: DeprecationWarning: Property 'u' to be removed after Cantera 2.5. Replaced by property 'velocity'
+  warnings.warn("Property 'u' to be removed after Cantera 2.5. "
