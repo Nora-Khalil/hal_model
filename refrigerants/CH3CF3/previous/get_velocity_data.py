@@ -1,4 +1,5 @@
 import os
+import re
 
 directory = './data'
 
@@ -7,33 +8,18 @@ file_names = os.listdir(directory)
 #file_names = ['.test_0.07250000000000001.csv.swp']
 #file_names = ['test_0.07.csv']
 
-#take list of file names and sort them
 file_name_dict_unsorted = {}
+
 for name in file_names:
-    if name.startswith('.') and name.endswith('.swp'): 
-        new_name = name.replace('.','',1).replace('.swp','') 
-        file_name_dict_unsorted[new_name] = new_name[5:11]
-    else: 
-        file_name_dict_unsorted[name] = name[5:11]
-volfrac_list_sorted = sorted(file_name_dict_unsorted.values())
-  
-#makes list of volume fractions
-volume_fractions = []
-for volfrac in volfrac_list_sorted:
-    volume_fractions.append(volfrac)
-    for character in volfrac:
-        if character.isalpha():
-            #print('there is a character')
-            new_volfrac = volfrac.replace(volfrac[-2:],'')
-            volume_fractions.append(new_volfrac)
-            volume_fractions.remove(volfrac)
+    match = re.match('test_([0-9.]+)\.csv', name)
+    if match:
+        volume_fraction = float(match.group(1))
+        file_name_dict_unsorted[name] = volume_fraction
+    else:
+        print(f"didn't match {name}")
 
+volume_fractions_float = sorted(file_name_dict_unsorted.values())
 
-#take list of volume fractions (list of strings) and change to a list of floats
-volume_fractions_float = []
-for string in volume_fractions: 
-    volume_fractions_float.append(float(string))
- 
     
 print('Volume fractions are:')
 print(volume_fractions_float)
