@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SBATCH --nodes=1
-#SBATCH --time=55:00:00
+#SBATCH --time=12-00:00:00
 #SBATCH --job-name=CH3CF3
 #SBATCH --error=rmg.slurm.log
 #SBATCH --cpus-per-task=5

@@ -77,7 +77,7 @@ species(
    
 simpleReactor(
         temperature=[(1000,'K'),(2000,'K')],
-        pressure= (1.0,'bar'),
+        pressure= [(1.0,'bar'),(10.0, 'bar')],
         nSims=12,
         initialMoleFractions={
         "C2H5F": [0.5,1.0],
@@ -95,7 +95,7 @@ simpleReactor(
         )
         
 model(
- i   toleranceMoveToCore = 0.2,
+    toleranceMoveToCore = 0.2,
     toleranceInterruptSimulation = 0.2,
     maximumEdgeSpecies = 5e5,
     filterReactions = True,

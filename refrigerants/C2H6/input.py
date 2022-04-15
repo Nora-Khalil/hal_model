@@ -74,7 +74,7 @@ species(
     
 simpleReactor(
         temperature=[(1000,'K'),(2000,'K')],
-        pressure= (1.0,'bar'),
+        pressure= [(1.0,'bar'),(10.0,'bar')],
         nSims=12,
         initialMoleFractions={
         "C2H6": [0.5,1.0],

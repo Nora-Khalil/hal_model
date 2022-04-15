@@ -87,7 +87,7 @@ species(
 )
 
 species(
-    label = 'H(5)',
+    label = 'H(6)',
     structure = adjacencyList("""multiplicity 2
 1 H u1 p0 c0
 """),
@@ -187,7 +187,7 @@ Ea raised from -0.9 to 0.0 kJ/mol."""),
 
 reaction(
     label = 'reaction3',
-    reactants = ['H(5)', 'CHF2(81)'],
+    reactants = ['H(6)', 'CHF2(81)'],
     products = ['CH2F2(1)'],
     transitionState = 'TS3',
     kinetics = Arrhenius(A=(2.75e+06,'cm^3/(mol*s)'), n=-0.32, Ea=(7690,'cal/mol'), T0=(1,'K'), comment="""Matched reaction 272 CHF2 + H <=> CH2F2 in R_Recombination/training

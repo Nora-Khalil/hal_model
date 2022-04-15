@@ -13,7 +13,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (44.0277,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.30868,0.0168731,-2.74859e-05,2.40846e-08,-8.17248e-12,34557.3,6.83238], Tmin=(100,'K'), Tmax=(861.307,'K')), NASAPolynomial(coeffs=[4.92579,0.00604145,-2.83759e-06,5.28871e-10,-3.56832e-14,34402,-0.0125907], Tmin=(861.307,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(287.132,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(83.1447,'J/(mol*K)'), label="""CCHF""", comment="""Thermo library: halogens"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.30867,0.0168732,-2.74863e-05,2.40851e-08,-8.17273e-12,34557.3,6.8324], Tmin=(100,'K'), Tmax=(861.297,'K')), NASAPolynomial(coeffs=[4.92581,0.00604143,-2.83757e-06,5.28867e-10,-3.56828e-14,34402,-0.012674], Tmin=(861.297,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(287.132,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(83.1447,'J/(mol*K)'), label="""CCHF""", comment="""Thermo library: halogens"""),
 )
 
 species(

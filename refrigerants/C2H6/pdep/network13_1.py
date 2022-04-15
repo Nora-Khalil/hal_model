@@ -12,6 +12,7 @@ species(
     spinMultiplicity = 2,
     opticalIsomers = 1,
     molecularWeight = (33.0068,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(892.977,'J/mol'), sigma=(3.458,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=1.0, comment="""GRI-Mech"""),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
     thermo = NASA(polynomials=[NASAPolynomial(coeffs=[4.3018,-0.00474912,2.11583e-05,-2.42764e-08,9.29225e-12,264.018,3.71666], Tmin=(200,'K'), Tmax=(1000,'K')), NASAPolynomial(coeffs=[4.17229,0.00188118,-3.46277e-07,1.94658e-11,1.76257e-16,31.0207,2.95768], Tmin=(1000,'K'), Tmax=(5000,'K'))], Tmin=(200,'K'), Tmax=(5000,'K'), E0=(2.49012,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(58.2013,'J/(mol*K)'), label="""HO2""", comment="""Thermo library: FFCM1(-)"""),
 )
@@ -107,35 +108,35 @@ species(
 
 transitionState(
     label = 'TS1',
-    E0 = (97.4331,'kJ/mol'),
+    E0 = (165.684,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS2',
-    E0 = (165.684,'kJ/mol'),
+    E0 = (97.4331,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
-)
-
-reaction(
-    label = 'reaction1',
-    reactants = ['O2(2)', 'H(6)'],
-    products = ['HO2(12)'],
-    transitionState = 'TS1',
-    kinetics = Arrhenius(A=(4.565e+12,'cm^3/(mol*s)'), n=0.44, Ea=(0,'cal/mol'), T0=(1,'K'), comment="""Kinetics taken from the arrheniusHigh attribute of a Troe/Lindemann exprssion. Originally from reaction library FFCM1(-)"""),
 )
 
 reaction(
     label = 'reaction2',
     reactants = ['O(7)', 'OH(8)'],
     products = ['HO2(12)'],
-    transitionState = 'TS2',
+    transitionState = 'TS1',
     kinetics = Arrhenius(A=(43772.1,'m^3/(mol*s)'), n=0.920148, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2000,'K'), comment="""Estimated using template [O_rad;O_birad] for rate rule [O_pri_rad;O_birad]
 Euclidian distance = 1.0
 family: Birad_R_Recombination
 Ea raised from -3.0 to 0 kJ/mol."""),
+)
+
+reaction(
+    label = 'reaction1',
+    reactants = ['O2(2)', 'H(6)'],
+    products = ['HO2(12)'],
+    transitionState = 'TS2',
+    kinetics = Arrhenius(A=(4.565e+12,'cm^3/(mol*s)'), n=0.44, Ea=(0,'cal/mol'), T0=(1,'K'), comment="""Kinetics taken from the arrheniusHigh attribute of a Troe/Lindemann exprssion. Originally from reaction library FFCM1(-)"""),
 )
 
 network(

@@ -1,754 +1,32 @@
 species(
-    label = 'O=COC(F)(F)C=C(F)F(7101)',
-    structure = adjacencyList("""1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {7,S} {10,S}
-6  O u0 p2 c0 {10,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {8,S}
-8  C u0 p0 c0 {7,S} {9,D} {11,S}
-9  C u0 p0 c0 {3,S} {4,S} {8,D}
-10 C u0 p0 c0 {5,S} {6,D} {12,S}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {10,S}
-"""),
-    E0 = (-1157.99,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([275,321,533,585,746,850,1103,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,2782.5,750,1395,475,1775,1000,278.036,1333.56,1335.58],'cm^-1')),
-        HinderedRotor(inertia=(0.155241,'amu*angstrom^2'), symmetry=1, barrier=(8.30873,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.717204,'amu*angstrom^2'), symmetry=1, barrier=(38.7945,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.724011,'amu*angstrom^2'), symmetry=1, barrier=(38.7795,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.02616,0.0717944,-7.71428e-05,4.36781e-08,-1.03167e-11,-139172,26.51], Tmin=(100,'K'), Tmax=(999.267,'K')), NASAPolynomial(coeffs=[11.0624,0.0316199,-1.68367e-05,3.44443e-09,-2.5086e-13,-141178,-21.9016], Tmin=(999.267,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1157.99,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-CdsCsH) + group(CdCFF) + group(Cds-OdOsH)"""),
-)
-
-species(
-    label = 'CO2(14)',
-    structure = adjacencyList("""1 O u0 p2 c0 {3,D}
-2 O u0 p2 c0 {3,D}
-3 C u0 p0 c0 {1,D} {2,D}
-"""),
-    E0 = (-403.138,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([664.558,664.681,1368.23,2264.78],'cm^-1')),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (44.0094,'amu'),
-    collisionModel = TransportData(shapeIndex=1, epsilon=(1622.99,'J/mol'), sigma=(3.941,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""PrimaryTransportLibrary"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.35681,0.00898413,-7.12206e-06,2.4573e-09,-1.42885e-13,-48372,9.9009], Tmin=(200,'K'), Tmax=(1000,'K')), NASAPolynomial(coeffs=[4.63651,0.00274146,-9.95898e-07,1.60387e-10,-9.16199e-15,-49024.9,-1.9349], Tmin=(1000,'K'), Tmax=(6000,'K'))], Tmin=(200,'K'), Tmax=(6000,'K'), E0=(-403.138,'kJ/mol'), Cp0=(29.1007,'J/(mol*K)'), CpInf=(62.3585,'J/(mol*K)'), label="""CO2""", comment="""Thermo library: FFCM1(-)"""),
-)
-
-species(
-    label = 'FC(F)=CC(F)F(2834)',
-    structure = adjacencyList("""1 F u0 p3 c0 {5,S}
-2 F u0 p3 c0 {5,S}
-3 F u0 p3 c0 {7,S}
-4 F u0 p3 c0 {7,S}
-5 C u0 p0 c0 {1,S} {2,S} {6,S} {8,S}
-6 C u0 p0 c0 {5,S} {7,D} {9,S}
-7 C u0 p0 c0 {3,S} {4,S} {6,D}
-8 H u0 p0 c0 {5,S}
-9 H u0 p0 c0 {6,S}
-"""),
-    E0 = (-792.994,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([171,205,598,1104,1143,1317,1411,3153,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,180],'cm^-1')),
-        HinderedRotor(inertia=(0.142102,'amu*angstrom^2'), symmetry=1, barrier=(3.2672,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (114.041,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(2858.21,'J/mol'), sigma=(4.57471,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with Tc=446.45 K, Pc=67.74 bar (from Joback method)"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.74532,0.0233589,0.000133412,-5.9431e-07,7.11464e-10,-95378,11.8568], Tmin=(10,'K'), Tmax=(302.26,'K')), NASAPolynomial(coeffs=[4.97982,0.0307765,-2.12832e-05,6.89182e-09,-8.42907e-13,-95561.1,5.58312], Tmin=(302.26,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-792.994,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(203.705,'J/(mol*K)'), label="""FC(F)DCC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'CO(13)',
-    structure = adjacencyList("""1 O u0 p1 c+1 {2,T}
-2 C u0 p1 c-1 {1,T}
-"""),
-    E0 = (-118.741,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([2193.04],'cm^-1')),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (28.01,'amu'),
-    collisionModel = TransportData(shapeIndex=1, epsilon=(762.44,'J/mol'), sigma=(3.69,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(1.76,'angstroms^3'), rotrelaxcollnum=4.0, comment="""PrimaryTransportLibrary"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.56838,-0.000852123,2.48917e-06,-1.5633e-09,3.13593e-13,-14284.3,3.57912], Tmin=(100,'K'), Tmax=(1571.64,'K')), NASAPolynomial(coeffs=[2.91307,0.00164657,-6.88609e-07,1.21036e-10,-7.84009e-15,-14180.9,6.71041], Tmin=(1571.64,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-118.741,'kJ/mol'), Cp0=(29.1007,'J/(mol*K)'), CpInf=(37.4151,'J/(mol*K)'), label="""CO""", comment="""Thermo library: primaryThermoLibrary"""),
-)
-
-species(
-    label = 'OC(F)(F)C=C(F)F(2619)',
-    structure = adjacencyList("""1  F u0 p3 c0 {6,S}
-2  F u0 p3 c0 {6,S}
-3  F u0 p3 c0 {8,S}
-4  F u0 p3 c0 {8,S}
-5  O u0 p2 c0 {6,S} {10,S}
-6  C u0 p0 c0 {1,S} {2,S} {5,S} {7,S}
-7  C u0 p0 c0 {6,S} {8,D} {9,S}
-8  C u0 p0 c0 {3,S} {4,S} {7,D}
-9  H u0 p0 c0 {7,S}
-10 H u0 p0 c0 {5,S}
-"""),
-    E0 = (-1007.4,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([3615,1277.5,1000,275,321,533,585,746,850,1103,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,180],'cm^-1')),
-        HinderedRotor(inertia=(0.0170877,'amu*angstrom^2'), symmetry=1, barrier=(5.82561,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.506556,'amu*angstrom^2'), symmetry=1, barrier=(11.6467,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (130.041,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.7482,0.0172572,0.00016515,-4.54346e-07,3.48046e-10,-121159,14.6152], Tmin=(10,'K'), Tmax=(468.635,'K')), NASAPolynomial(coeffs=[6.60543,0.034901,-2.58576e-05,8.75963e-09,-1.10002e-12,-121888,-1.92801], Tmin=(468.635,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-1007.4,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), label="""OC(F)(F)CDC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'CF2(43)',
-    structure = adjacencyList("""1 F u0 p3 c0 {3,S}
-2 F u0 p3 c0 {3,S}
-3 C u0 p1 c0 {1,S} {2,S}
-"""),
-    E0 = (-203.712,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([192,594,627],'cm^-1')),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (50.0074,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(897.963,'J/mol'), sigma=(3.977,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.28591,0.0107608,-1.05382e-05,4.89881e-09,-8.86384e-13,-24340.7,13.1348], Tmin=(298,'K'), Tmax=(1300,'K')), NASAPolynomial(coeffs=[5.33121,0.00197748,-9.60248e-07,2.10704e-10,-1.5954e-14,-25190.9,-2.56367], Tmin=(1300,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(-203.712,'kJ/mol'), Cp0=(33.2579,'J/mol/K'), CpInf=(58.2013,'J/mol/K'), label="""CF2""", comment="""Thermo library: halogens"""),
-)
-
-species(
-    label = 'O=COC=C(F)F(349)',
-    structure = adjacencyList("""1 F u0 p3 c0 {6,S}
-2 F u0 p3 c0 {6,S}
-3 O u0 p2 c0 {5,S} {7,S}
-4 O u0 p2 c0 {7,D}
-5 C u0 p0 c0 {3,S} {6,D} {8,S}
-6 C u0 p0 c0 {1,S} {2,S} {5,D}
-7 C u0 p0 c0 {3,S} {4,D} {9,S}
-8 H u0 p0 c0 {5,S}
-9 H u0 p0 c0 {7,S}
-"""),
-    E0 = (-651.596,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,2782.5,750,1395,475,1775,1000,374.935,375.068],'cm^-1')),
-        HinderedRotor(inertia=(0.310516,'amu*angstrom^2'), symmetry=1, barrier=(31.0276,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.311243,'amu*angstrom^2'), symmetry=1, barrier=(31.0274,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (108.043,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.97298,0.045834,-4.1708e-05,1.8691e-08,-3.4112e-12,-78297.1,18.941], Tmin=(100,'K'), Tmax=(1281.86,'K')), NASAPolynomial(coeffs=[10.8123,0.0182514,-9.43169e-06,1.90488e-09,-1.37453e-13,-80563.3,-25.8986], Tmin=(1281.86,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-651.596,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(199.547,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-(Cds-O2d)(Cds-Cd)) + group(Cds-CdsOsH) + group(CdCFF) + longDistanceInteraction_noncyclic(Cd(F)2=CdOs) + group(Cds-OdOsH)"""),
-)
-
-species(
-    label = 'O=COF(342)',
-    structure = adjacencyList("""1 F u0 p3 c0 {2,S}
-2 O u0 p2 c0 {1,S} {4,S}
-3 O u0 p2 c0 {4,D}
-4 C u0 p0 c0 {2,S} {3,D} {5,S}
-5 H u0 p0 c0 {4,S}
-"""),
-    E0 = (-232.347,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([990,1113,2782.5,750,1395,475,1775,1000],'cm^-1')),
-        HinderedRotor(inertia=(1.53816,'amu*angstrom^2'), symmetry=1, barrier=(35.3653,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (64.0158,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.97637,0.00271698,0.00012926,-6.89693e-07,1.23785e-09,-27944.4,7.38798], Tmin=(10,'K'), Tmax=(170.593,'K')), NASAPolynomial(coeffs=[3.68527,0.0139831,-8.84585e-06,2.59913e-09,-2.92096e-13,-27940.9,8.0882], Tmin=(170.593,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-232.347,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(103.931,'J/(mol*K)'), label="""ODCOF""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'F[C]C=C(F)F-2(6976)',
-    structure = adjacencyList("""1 F u0 p3 c0 {5,S}
-2 F u0 p3 c0 {5,S}
-3 F u0 p3 c0 {6,S}
-4 C u0 p0 c0 {5,D} {6,S} {7,S}
-5 C u0 p0 c0 {1,S} {2,S} {4,D}
-6 C u0 p1 c0 {3,S} {4,S}
-7 H u0 p0 c0 {4,S}
-"""),
-    E0 = (-223.777,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,315,622,1128],'cm^-1')),
-        HinderedRotor(inertia=(0.0539877,'amu*angstrom^2'), symmetry=1, barrier=(22.3783,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (94.0351,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.53736,0.0330301,-3.01871e-05,1.357e-08,-2.48101e-12,-26862.3,15.9167], Tmin=(100,'K'), Tmax=(1281.09,'K')), NASAPolynomial(coeffs=[8.95577,0.0129898,-6.72251e-06,1.35932e-09,-9.81616e-14,-28506.9,-16.6384], Tmin=(1281.09,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-223.777,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(153.818,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(Cds-CdsCsH) + group(CdCFF) + group(CJ2_singlet-FC)"""),
-)
-
-species(
-    label = 'O=COC(F)=CC(F)(F)F(12309)',
-    structure = adjacencyList("""1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {7,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {9,S} {10,S}
-6  O u0 p2 c0 {10,D}
-7  C u0 p0 c0 {1,S} {2,S} {3,S} {8,S}
-8  C u0 p0 c0 {7,S} {9,D} {11,S}
-9  C u0 p0 c0 {4,S} {5,S} {8,D}
-10 C u0 p0 c0 {5,S} {6,D} {12,S}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {10,S}
-"""),
-    E0 = (-1151.92,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([219,296,586,564,718,793,1177,1228,3010,987.5,1337.5,450,1655,326,540,652,719,1357,2782.5,750,1395,475,1775,1000,180,493.016,2318.56],'cm^-1')),
-        HinderedRotor(inertia=(0.184528,'amu*angstrom^2'), symmetry=1, barrier=(4.24266,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.39442,'amu*angstrom^2'), symmetry=1, barrier=(32.0605,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.39462,'amu*angstrom^2'), symmetry=1, barrier=(32.0651,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.992528,0.0726661,-8.03537e-05,4.67904e-08,-1.13258e-11,-138441,26.3978], Tmin=(100,'K'), Tmax=(978.886,'K')), NASAPolynomial(coeffs=[11.1638,0.0311045,-1.66683e-05,3.41878e-09,-2.4933e-13,-140432,-22.456], Tmin=(978.886,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1151.92,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-(Cds-O2d)(Cds-Cd)) + group(CsCdFFF) + longDistanceInteraction_noncyclic(Cs(F)3-R-Cds(F)) + group(Cds-CdsCsH) + group(CdCFO) + group(Cds-OdOsH)"""),
-)
-
-species(
-    label = 'FC1(F)[CH]C(F)(F)O[CH]O1(12310)',
-    structure = adjacencyList("""multiplicity 3
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {8,S}
-4  F u0 p3 c0 {8,S}
-5  O u0 p2 c0 {7,S} {10,S}
-6  O u0 p2 c0 {8,S} {10,S}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {9,S}
-8  C u0 p0 c0 {3,S} {4,S} {6,S} {9,S}
-9  C u1 p0 c0 {7,S} {8,S} {11,S}
-10 C u1 p0 c0 {5,S} {6,S} {12,S}
-11 H u0 p0 c0 {9,S}
-12 H u0 p0 c0 {10,S}
-"""),
-    E0 = (-894.34,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([202,304,469,581,520,674,579,755,732,952,1136,1220,1240,1408,2750,3150,900,1100,621.265,621.265,621.265,621.266,621.266,621.266,621.266,621.266,621.266,621.266,621.266,621.266],'cm^-1')),
-    ],
-    spinMultiplicity = 3,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-1.02259,0.0799969,-8.2347e-05,4.10376e-08,-7.42219e-12,-107357,27.9239], Tmin=(100,'K'), Tmax=(1665.13,'K')), NASAPolynomial(coeffs=[19.2405,0.00895122,1.80437e-06,-7.21869e-10,5.88171e-14,-111004,-70.8537], Tmin=(1665.13,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-894.34,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(282.692,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsCs) + group(O2s-CsCs) + group(Cs-CsCsHH) + group(CsCFFO) + group(CsCFFO) + group(Cs-OsOsHH) + ring(1,3-Dioxane) + radical(CCJCO) + radical(OCJO)"""),
-)
-
-species(
-    label = 'O=[C]OC(F)(F)C[C](F)F(7586)',
-    structure = adjacencyList("""multiplicity 3
-1  F u0 p3 c0 {8,S}
-2  F u0 p3 c0 {8,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {8,S} {10,S}
-6  O u0 p2 c0 {10,D}
-7  C u0 p0 c0 {8,S} {9,S} {11,S} {12,S}
-8  C u0 p0 c0 {1,S} {2,S} {5,S} {7,S}
-9  C u1 p0 c0 {3,S} {4,S} {7,S}
-10 C u1 p0 c0 {5,S} {6,D}
-11 H u0 p0 c0 {7,S}
-12 H u0 p0 c0 {7,S}
-"""),
-    E0 = (-905.165,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([2750,2850,1437.5,1250,1305,750,350,223,363,546,575,694,1179,1410,190,488,555,1236,1407,1855,455,950,292.327,292.678,292.797,2428.54],'cm^-1')),
-        HinderedRotor(inertia=(0.15383,'amu*angstrom^2'), symmetry=1, barrier=(9.38232,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.612218,'amu*angstrom^2'), symmetry=1, barrier=(37.2848,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.613477,'amu*angstrom^2'), symmetry=1, barrier=(37.2884,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.612617,'amu*angstrom^2'), symmetry=1, barrier=(37.2708,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 3,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.0111792,0.0959339,-0.00015284,1.31287e-07,-4.53806e-11,-108730,30.1801], Tmin=(100,'K'), Tmax=(746.85,'K')), NASAPolynomial(coeffs=[11.1044,0.0325741,-1.76597e-05,3.54428e-09,-2.51902e-13,-110277,-19.3634], Tmin=(746.85,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-905.165,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(Cs-CsCsHH) + group(CsCFFO) + group(CsCsFFH) + group(Cds-OdOsH) + radical(Csj(Cs-CsHH)(F1s)(F1s)) + radical((O)CJOC)"""),
-)
-
-species(
-    label = '[O]COC(F)(F)[C]=C(F)F(12311)',
-    structure = adjacencyList("""multiplicity 3
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {7,S} {8,S}
-6  O u1 p2 c0 {8,S}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {10,S}
-8  C u0 p0 c0 {5,S} {6,S} {11,S} {12,S}
-9  C u0 p0 c0 {3,S} {4,S} {10,D}
-10 C u1 p0 c0 {7,S} {9,D}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {8,S}
-"""),
-    E0 = (-676.292,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([140,424,499,621,667,843,876,1082,2750,2850,1437.5,1250,1305,750,350,562,600,623,1070,1265,1685,370,248.827,250.428,250.976,252.203,1853.68],'cm^-1')),
-        HinderedRotor(inertia=(0.00268989,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.191789,'amu*angstrom^2'), symmetry=1, barrier=(8.42928,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.881733,'amu*angstrom^2'), symmetry=1, barrier=(39.3212,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 3,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.329397,0.0875263,-0.000120893,8.73871e-08,-2.54368e-11,-81213,30.7149], Tmin=(100,'K'), Tmax=(836.062,'K')), NASAPolynomial(coeffs=[12.6502,0.0285793,-1.51339e-05,3.05573e-09,-2.19849e-13,-83273.2,-26.5195], Tmin=(836.062,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-676.292,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsCs) + group(O2s-CsH) + group(CsCFFO) + group(Cs-OsOsHH) + group(Cds-CdsCsH) + group(CdCFF) + radical(OCOJ) + radical(Cdj(Cs-F1sF1sO2s)(Cd-F1sF1s))"""),
-)
-
-species(
-    label = 'O=[C]OC(F)(F)[CH]C(F)F(7107)',
-    structure = adjacencyList("""multiplicity 3
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {8,S}
-4  F u0 p3 c0 {8,S}
-5  O u0 p2 c0 {7,S} {10,S}
-6  O u0 p2 c0 {10,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {9,S}
-8  C u0 p0 c0 {3,S} {4,S} {9,S} {11,S}
-9  C u1 p0 c0 {7,S} {8,S} {12,S}
-10 C u1 p0 c0 {5,S} {6,D}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {9,S}
-"""),
-    E0 = (-895.965,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([253,525,597,667,842,1178,1324,522,611,926,1093,1137,1374,1416,3112,3025,407.5,1350,352.5,1855,455,950,180,180,180,523.427],'cm^-1')),
-        HinderedRotor(inertia=(5.20297,'amu*angstrom^2'), symmetry=1, barrier=(119.627,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.195843,'amu*angstrom^2'), symmetry=1, barrier=(4.50282,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.38736,'amu*angstrom^2'), symmetry=1, barrier=(31.8982,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.63625,'amu*angstrom^2'), symmetry=1, barrier=(37.6206,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 3,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(3462.44,'J/mol'), sigma=(5.79043,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with Tc=540.83 K, Pc=40.47 bar (from Joback method)"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.047415,0.0976703,-0.000157072,1.3629e-07,-4.76708e-11,-107622,30.5537], Tmin=(100,'K'), Tmax=(738.496,'K')), NASAPolynomial(coeffs=[11.0351,0.0335579,-1.85529e-05,3.75333e-09,-2.67986e-13,-109148,-18.7992], Tmin=(738.496,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-895.965,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(Cs-CsCsHH) + group(CsCFFO) + group(CsCsFFH) + group(Cds-OdOsH) + radical(Csj(Cs-F1sF1sO2s)(Cs-F1sF1sH)(H)) + radical((O)CJOC)"""),
-)
-
-species(
-    label = 'O[CH]OC(F)(F)[C]=C(F)F(12312)',
-    structure = adjacencyList("""multiplicity 3
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {7,S} {8,S}
+    label = 'OC([C](F)F)C(F)(F)OF(6588)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {7,S}
 6  O u0 p2 c0 {8,S} {12,S}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {10,S}
-8  C u1 p0 c0 {5,S} {6,S} {11,S}
-9  C u0 p0 c0 {3,S} {4,S} {10,D}
-10 C u1 p0 c0 {7,S} {9,D}
+7  O u0 p2 c0 {5,S} {9,S}
+8  C u0 p0 c0 {6,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {1,S} {2,S} {7,S} {8,S}
+10 C u1 p0 c0 {3,S} {4,S} {8,S}
 11 H u0 p0 c0 {8,S}
 12 H u0 p0 c0 {6,S}
 """),
-    E0 = (-714.73,'kJ/mol'),
+    E0 = (-987.202,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([3615,1277.5,1000,140,424,499,621,667,843,876,1082,3025,407.5,1350,352.5,562,600,623,1070,1265,1685,370,205.975,205.978,205.986,206.012],'cm^-1')),
-        HinderedRotor(inertia=(0.00397362,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.218419,'amu*angstrom^2'), symmetry=1, barrier=(6.57696,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.218466,'amu*angstrom^2'), symmetry=1, barrier=(6.57692,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.218428,'amu*angstrom^2'), symmetry=1, barrier=(6.57689,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 3,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.613425,0.11107,-0.000193916,1.66495e-07,-5.48085e-11,-85805.2,33.3926], Tmin=(100,'K'), Tmax=(852.988,'K')), NASAPolynomial(coeffs=[14.4355,0.0242284,-1.25909e-05,2.41499e-09,-1.64497e-13,-87780.6,-33.347], Tmin=(852.988,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-714.73,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsCs) + group(O2s-CsH) + group(CsCFFO) + group(Cs-OsOsHH) + group(Cds-CdsCsH) + group(CdCFF) + radical(OCJO) + radical(Cdj(Cs-F1sF1sO2s)(Cd-F1sF1s))"""),
-)
-
-species(
-    label = 'F(37)',
-    structure = adjacencyList("""multiplicity 2
-1 F u1 p3 c0
-"""),
-    E0 = (72.8916,'kJ/mol'),
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (18.9984,'amu'),
-    collisionModel = TransportData(shapeIndex=0, epsilon=(665.158,'J/mol'), sigma=(2.75,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.90371,-0.000635296,2.64735e-07,7.69063e-11,-5.45254e-14,8672.27,2.70828], Tmin=(298,'K'), Tmax=(1400,'K')), NASAPolynomial(coeffs=[2.65117,-0.00014013,5.19236e-08,-8.84954e-12,5.9028e-16,8758.29,4.07857], Tmin=(1400,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(72.8916,'kJ/mol'), Cp0=(20.7862,'J/mol/K'), CpInf=(20.7862,'J/mol/K'), label="""F""", comment="""Thermo library: primaryThermoLibrary"""),
-)
-
-species(
-    label = 'O=COC(F)=C[C](F)F(12313)',
-    structure = adjacencyList("""multiplicity 2
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {8,S}
-3  F u0 p3 c0 {8,S}
-4  O u0 p2 c0 {7,S} {9,S}
-5  O u0 p2 c0 {9,D}
-6  C u0 p0 c0 {7,D} {8,S} {10,S}
-7  C u0 p0 c0 {1,S} {4,S} {6,D}
-8  C u1 p0 c0 {2,S} {3,S} {6,S}
-9  C u0 p0 c0 {4,S} {5,D} {11,S}
-10 H u0 p0 c0 {6,S}
-11 H u0 p0 c0 {9,S}
-"""),
-    E0 = (-750.667,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([3010,987.5,1337.5,450,1655,326,540,652,719,1357,161,297,490,584,780,1358,2782.5,750,1395,475,1775,1000,185.521,200.562],'cm^-1')),
-        HinderedRotor(inertia=(0.00353626,'amu*angstrom^2'), symmetry=1, barrier=(5.89174,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.20389,'amu*angstrom^2'), symmetry=1, barrier=(35.7864,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.46166,'amu*angstrom^2'), symmetry=1, barrier=(35.842,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,557,1111,1380,1390,370,380,2900,435,223,363,546,575,694,1179,1410,190,488,555,1236,1407,293.062,297.31,297.519],'cm^-1')),
+        HinderedRotor(inertia=(0.154502,'amu*angstrom^2'), symmetry=1, barrier=(10.069,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.163826,'amu*angstrom^2'), symmetry=1, barrier=(10.0735,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.161908,'amu*angstrom^2'), symmetry=1, barrier=(10.1058,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.403778,'amu*angstrom^2'), symmetry=1, barrier=(25.147,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 2,
     opticalIsomers = 1,
-    molecularWeight = (139.053,'amu'),
+    molecularWeight = (165.039,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.04971,0.0721979,-9.65788e-05,7.24464e-08,-2.27385e-11,-90184.8,25.8634], Tmin=(100,'K'), Tmax=(765.845,'K')), NASAPolynomial(coeffs=[8.782,0.031812,-1.74781e-05,3.5891e-09,-2.60829e-13,-91369.1,-9.37763], Tmin=(765.845,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-750.667,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-(Cds-O2d)(Cds-Cd)) + group(CsCFFH) + group(Cds-CdsCsH) + group(CdCFO) + group(Cds-OdOsH) + radical(Csj(Cd-CdH)(F1s)(F1s))"""),
-)
-
-species(
-    label = 'O=COC(F)(F)C=[C]F(12314)',
-    structure = adjacencyList("""multiplicity 2
-1  F u0 p3 c0 {6,S}
-2  F u0 p3 c0 {6,S}
-3  F u0 p3 c0 {9,S}
-4  O u0 p2 c0 {6,S} {8,S}
-5  O u0 p2 c0 {8,D}
-6  C u0 p0 c0 {1,S} {2,S} {4,S} {7,S}
-7  C u0 p0 c0 {6,S} {9,D} {10,S}
-8  C u0 p0 c0 {4,S} {5,D} {11,S}
-9  C u1 p0 c0 {3,S} {7,D}
-10 H u0 p0 c0 {7,S}
-11 H u0 p0 c0 {8,S}
-"""),
-    E0 = (-706.84,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([275,321,533,585,746,850,1103,3010,987.5,1337.5,450,1655,2782.5,750,1395,475,1775,1000,167,640,1190,247.819,747.47,1816.67],'cm^-1')),
-        HinderedRotor(inertia=(0.164807,'amu*angstrom^2'), symmetry=1, barrier=(6.72704,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.933119,'amu*angstrom^2'), symmetry=1, barrier=(38.5023,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.928426,'amu*angstrom^2'), symmetry=1, barrier=(38.3912,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (139.053,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.25965,0.0664346,-7.61483e-05,4.68595e-08,-1.20295e-11,-84919.6,25.1577], Tmin=(100,'K'), Tmax=(925.876,'K')), NASAPolynomial(coeffs=[9.93098,0.0289726,-1.54569e-05,3.15957e-09,-2.29892e-13,-86525.4,-16.0087], Tmin=(925.876,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-706.84,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-CdsCsH) + group(CdCFH) + group(Cds-OdOsH) + radical(Cdj(Cd-CsH)(F1s))"""),
-)
-
-species(
-    label = '[O]C=O(339)',
-    structure = adjacencyList("""multiplicity 2
-1 O u1 p2 c0 {3,S}
-2 O u0 p2 c0 {3,D}
-3 C u0 p0 c0 {1,S} {2,D} {4,S}
-4 H u0 p0 c0 {3,S}
-"""),
-    E0 = (-138.762,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([2782.5,750,1395,475,1775,1000],'cm^-1')),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (45.0174,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(4140.61,'J/mol'), sigma=(3.59,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=2.0, comment="""NOx2018"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.51545,0.0112656,-9.58083e-06,4.36318e-09,-8.44581e-13,-16672.2,7.37034], Tmin=(100,'K'), Tmax=(1184.07,'K')), NASAPolynomial(coeffs=[5.09941,0.00591472,-2.80224e-06,5.4664e-10,-3.87737e-14,-17047.4,-0.538979], Tmin=(1184.07,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-138.762,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(83.1447,'J/(mol*K)'), label="""formyloxy""", comment="""Thermo library: DFT_QCI_thermo"""),
-)
-
-species(
-    label = 'F[C](F)C=C(F)F(3983)',
-    structure = adjacencyList("""multiplicity 2
-1 F u0 p3 c0 {6,S}
-2 F u0 p3 c0 {6,S}
-3 F u0 p3 c0 {7,S}
-4 F u0 p3 c0 {7,S}
-5 C u0 p0 c0 {6,S} {7,D} {8,S}
-6 C u1 p0 c0 {1,S} {2,S} {5,S}
-7 C u0 p0 c0 {3,S} {4,S} {5,D}
-8 H u0 p0 c0 {5,S}
-"""),
-    E0 = (-614.231,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([3010,987.5,1337.5,450,1655,161,297,490,584,780,1358,182,240,577,636,1210,1413],'cm^-1')),
-        HinderedRotor(inertia=(0.0992851,'amu*angstrom^2'), symmetry=1, barrier=(19.2504,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (113.034,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.51835,0.0407414,-4.48146e-05,2.5864e-08,-6.12504e-12,-73871.6,11.7734], Tmin=(10,'K'), Tmax=(970.763,'K')), NASAPolynomial(coeffs=[8.59247,0.0198336,-1.25084e-05,3.67779e-09,-4.11424e-13,-74856.8,-12.5557], Tmin=(970.763,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-614.231,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(182.918,'J/(mol*K)'), label="""F[C](F)CDC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'HCO(15)',
-    structure = adjacencyList("""multiplicity 2
-1 O u0 p2 c0 {2,D}
-2 C u1 p0 c0 {1,D} {3,S}
-3 H u0 p0 c0 {2,S}
-"""),
-    E0 = (32.4782,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([1131.19,1955.83,1955.83],'cm^-1')),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (29.018,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(4140.62,'J/mol'), sigma=(3.59,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[4.23755,-0.00332075,1.4003e-05,-1.3424e-08,4.37416e-12,3872.41,3.30835], Tmin=(200,'K'), Tmax=(1000,'K')), NASAPolynomial(coeffs=[3.92002,0.00252279,-6.71004e-07,1.05616e-10,-7.43798e-15,3653.43,3.58077], Tmin=(1000,'K'), Tmax=(6000,'K'))], Tmin=(200,'K'), Tmax=(6000,'K'), E0=(32.4782,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(58.2013,'J/(mol*K)'), label="""HCO""", comment="""Thermo library: FFCM1(-)"""),
-)
-
-species(
-    label = '[O]C(F)(F)C=C(F)F(2620)',
-    structure = adjacencyList("""multiplicity 2
-1 F u0 p3 c0 {6,S}
-2 F u0 p3 c0 {6,S}
-3 F u0 p3 c0 {8,S}
-4 F u0 p3 c0 {8,S}
-5 O u1 p2 c0 {6,S}
-6 C u0 p0 c0 {1,S} {2,S} {5,S} {7,S}
-7 C u0 p0 c0 {6,S} {8,D} {9,S}
-8 C u0 p0 c0 {3,S} {4,S} {7,D}
-9 H u0 p0 c0 {7,S}
-"""),
-    E0 = (-764.375,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([526,555,698,907,1200,1145,1227,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,180,180],'cm^-1')),
-        HinderedRotor(inertia=(1.36473,'amu*angstrom^2'), symmetry=1, barrier=(31.3779,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (129.033,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.6798,0.0308741,2.42652e-05,-8.69938e-08,5.27092e-11,-91929.8,12.9091], Tmin=(10,'K'), Tmax=(664.294,'K')), NASAPolynomial(coeffs=[7.52439,0.029187,-2.03893e-05,6.45721e-09,-7.64213e-13,-92914.1,-7.63072], Tmin=(664.294,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-764.375,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(203.705,'J/(mol*K)'), label="""[O]C(F)(F)CDC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'CF2CH(73)',
-    structure = adjacencyList("""multiplicity 2
-1 F u0 p3 c0 {3,S}
-2 F u0 p3 c0 {3,S}
-3 C u0 p0 c0 {1,S} {2,S} {4,D}
-4 C u1 p0 c0 {3,D} {5,S}
-5 H u0 p0 c0 {4,S}
-"""),
-    E0 = (-92.0165,'kJ/mol'),
-    modes = [
-        IdealGasTranslation(mass=(63.0046,'amu')),
-        NonlinearRotor(inertia=([43.4896,46.129,89.6186],'amu*angstrom^2'), symmetry=1),
-        HarmonicOscillator(frequencies=([420.994,524.562,552.014,640.304,746.121,978.508,1261.79,1779.04,3347.18],'cm^-1')),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (63.0261,'amu'),
-    collisionModel = TransportData(shapeIndex=2, epsilon=(2091.09,'J/mol'), sigma=(4.442,'angstroms'), dipoleMoment=(1.4,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.95511,0.00251604,4.75146e-05,-8.97685e-08,4.98372e-11,-11065.2,8.58309], Tmin=(10,'K'), Tmax=(611.191,'K')), NASAPolynomial(coeffs=[3.6485,0.0155109,-1.13452e-05,3.84899e-09,-4.87703e-13,-11233,8.2324], Tmin=(611.191,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-92.0165,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(108.088,'J/(mol*K)'), label="""[CH]DC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'O=CO[C](F)F(2722)',
-    structure = adjacencyList("""multiplicity 2
-1 F u0 p3 c0 {5,S}
-2 F u0 p3 c0 {5,S}
-3 O u0 p2 c0 {5,S} {6,S}
-4 O u0 p2 c0 {6,D}
-5 C u1 p0 c0 {1,S} {2,S} {3,S}
-6 C u0 p0 c0 {3,S} {4,D} {7,S}
-7 H u0 p0 c0 {6,S}
-"""),
-    E0 = (-588.858,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([493,600,700,1144,1293,2782.5,750,1395,475,1775,1000,180,495.152],'cm^-1')),
-        HinderedRotor(inertia=(0.185207,'amu*angstrom^2'), symmetry=1, barrier=(4.25828,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.15828,'amu*angstrom^2'), symmetry=1, barrier=(26.6312,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (95.0249,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.74487,0.0287174,-2.31855e-05,7.30326e-09,-3.27579e-13,-70824,11.9936], Tmin=(10,'K'), Tmax=(1043.38,'K')), NASAPolynomial(coeffs=[9.26732,0.0127213,-7.62913e-06,2.1174e-09,-2.24067e-13,-72258.1,-16.2334], Tmin=(1043.38,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-588.858,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(149.66,'J/(mol*K)'), label="""ODCO[C](F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'H(5)',
-    structure = adjacencyList("""multiplicity 2
-1 H u1 p0 c0
-"""),
-    E0 = (211.805,'kJ/mol'),
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (1.00797,'amu'),
-    collisionModel = TransportData(shapeIndex=0, epsilon=(1205.6,'J/mol'), sigma=(2.05,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,4.63019e-14,-6.5121e-17,3.00122e-20,-4.26132e-24,25474.2,-0.444973], Tmin=(100,'K'), Tmax=(3821.96,'K')), NASAPolynomial(coeffs=[2.5,2.03348e-10,-7.42469e-14,1.19914e-17,-7.22693e-22,25474.2,-0.444972], Tmin=(3821.96,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(211.805,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""H""", comment="""Thermo library: primaryThermoLibrary"""),
-)
-
-species(
-    label = 'O=COC(F)(F)[C]=C(F)F(12315)',
-    structure = adjacencyList("""multiplicity 2
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {7,S} {8,S}
-6  O u0 p2 c0 {8,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {10,S}
-8  C u0 p0 c0 {5,S} {6,D} {11,S}
-9  C u0 p0 c0 {3,S} {4,S} {10,D}
-10 C u1 p0 c0 {7,S} {9,D}
-11 H u0 p0 c0 {8,S}
-"""),
-    E0 = (-883.526,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([140,424,499,621,667,843,876,1082,2782.5,750,1395,475,1775,1000,562,600,623,1070,1265,1685,370,180,180,916.33],'cm^-1')),
-        HinderedRotor(inertia=(0.136426,'amu*angstrom^2'), symmetry=1, barrier=(3.13669,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.136496,'amu*angstrom^2'), symmetry=1, barrier=(3.13831,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(2.3558,'amu*angstrom^2'), symmetry=1, barrier=(54.1645,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (157.043,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.824454,0.0767353,-0.000104619,7.75815e-08,-2.36176e-11,-106156,28.9226], Tmin=(100,'K'), Tmax=(794.72,'K')), NASAPolynomial(coeffs=[10.1503,0.0297945,-1.60168e-05,3.25295e-09,-2.3478e-13,-107638,-13.9262], Tmin=(794.72,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-883.526,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-CdsCsH) + group(CdCFF) + group(Cds-OdOsH) + radical(Cdj(Cs-F1sF1sO2s)(Cd-F1sF1s))"""),
-)
-
-species(
-    label = 'O=[C]OC(F)(F)C=C(F)F(7585)',
-    structure = adjacencyList("""multiplicity 2
-1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {9,S}
-4  F u0 p3 c0 {9,S}
-5  O u0 p2 c0 {7,S} {10,S}
-6  O u0 p2 c0 {10,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {8,S}
-8  C u0 p0 c0 {7,S} {9,D} {11,S}
-9  C u0 p0 c0 {3,S} {4,S} {8,D}
-10 C u1 p0 c0 {5,S} {6,D}
-11 H u0 p0 c0 {8,S}
-"""),
-    E0 = (-961.54,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([275,321,533,585,746,850,1103,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,1855,455,950,267.429,267.454,2964.29],'cm^-1')),
-        HinderedRotor(inertia=(0.788388,'amu*angstrom^2'), symmetry=1, barrier=(40.7985,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.795403,'amu*angstrom^2'), symmetry=1, barrier=(40.814,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.804905,'amu*angstrom^2'), symmetry=1, barrier=(40.7884,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 2,
-    opticalIsomers = 1,
-    molecularWeight = (157.043,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.564772,0.0825276,-0.000115663,8.56658e-08,-2.5693e-11,-115529,26.7932], Tmin=(100,'K'), Tmax=(810.355,'K')), NASAPolynomial(coeffs=[11.5475,0.0283158,-1.53151e-05,3.11119e-09,-2.24385e-13,-117309,-23.8826], Tmin=(810.355,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-961.54,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-CdsCsH) + group(CdCFF) + group(Cds-OdOsH) + radical((O)CJOC)"""),
-)
-
-species(
-    label = 'O=CO(2794)',
-    structure = adjacencyList("""1 O u0 p2 c0 {3,S} {5,S}
-2 O u0 p2 c0 {3,D}
-3 C u0 p0 c0 {1,S} {2,D} {4,S}
-4 H u0 p0 c0 {3,S}
-5 H u0 p0 c0 {1,S}
-"""),
-    E0 = (-389.483,'kJ/mol'),
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (46.0254,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.76621,-0.000867468,3.3288e-05,-3.95813e-08,1.3994e-11,-46830.2,7.56895], Tmin=(100,'K'), Tmax=(997.627,'K')), NASAPolynomial(coeffs=[5.52472,0.00779112,-3.35078e-06,6.868e-10,-5.23895e-14,-47962.8,-4.82863], Tmin=(997.627,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-389.483,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(103.931,'J/(mol*K)'), label="""formic_acid""", comment="""Thermo library: DFT_QCI_thermo"""),
-)
-
-species(
-    label = 'FC(F)=C=C(F)F(12316)',
-    structure = adjacencyList("""1 F u0 p3 c0 {5,S}
-2 F u0 p3 c0 {5,S}
-3 F u0 p3 c0 {6,S}
-4 F u0 p3 c0 {6,S}
-5 C u0 p0 c0 {1,S} {2,S} {7,D}
-6 C u0 p0 c0 {3,S} {4,S} {7,D}
-7 C u0 p0 c0 {5,D} {6,D}
-"""),
-    E0 = (-565.53,'kJ/mol'),
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (112.026,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.69607,0.0291897,-1.42099e-05,-1.14255e-08,1.00517e-11,-68015.9,10.4183], Tmin=(10,'K'), Tmax=(765.047,'K')), NASAPolynomial(coeffs=[7.68719,0.0182313,-1.21519e-05,3.71067e-09,-4.26611e-13,-68916.6,-9.66282], Tmin=(765.047,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-565.53,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(157.975,'J/(mol*K)'), label="""FC(F)DCDC(F)F""", comment="""Thermo library: CHOF_G4"""),
-)
-
-species(
-    label = 'O=COC(F)(F)[C]C(F)F(12317)',
-    structure = adjacencyList("""1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {8,S}
-4  F u0 p3 c0 {8,S}
-5  O u0 p2 c0 {7,S} {9,S}
-6  O u0 p2 c0 {9,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {10,S}
-8  C u0 p0 c0 {3,S} {4,S} {10,S} {11,S}
-9  C u0 p0 c0 {5,S} {6,D} {12,S}
-10 C u0 p1 c0 {7,S} {8,S}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {9,S}
-"""),
-    E0 = (-857.116,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([2750,2850,1437.5,1250,1305,750,350,257,409,1143,1361,2944,2782.5,750,1395,475,1775,1000,200,800,933.333,1066.67,1200,1333.33,1466.67,1600],'cm^-1')),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.415503,0.0872535,-0.00012327,9.89348e-08,-3.31207e-11,-102966,39.0922], Tmin=(100,'K'), Tmax=(721.469,'K')), NASAPolynomial(coeffs=[9.30406,0.0379703,-2.07993e-05,4.24259e-09,-3.06448e-13,-104248,-0.887567], Tmin=(721.469,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-857.116,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(CsCFFH) + group(Cds-OdOsH) + group(CsJ2_singlet-CsH)"""),
-)
-
-species(
-    label = 'O=COC(F)(F)C(F)[C]F(12318)',
-    structure = adjacencyList("""1  F u0 p3 c0 {7,S}
-2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {8,S}
-4  F u0 p3 c0 {10,S}
-5  O u0 p2 c0 {7,S} {9,S}
-6  O u0 p2 c0 {9,D}
-7  C u0 p0 c0 {1,S} {2,S} {5,S} {8,S}
-8  C u0 p0 c0 {3,S} {7,S} {10,S} {11,S}
-9  C u0 p0 c0 {5,S} {6,D} {12,S}
-10 C u0 p1 c0 {4,S} {8,S}
-11 H u0 p0 c0 {8,S}
-12 H u0 p0 c0 {9,S}
-"""),
-    E0 = (-893.266,'kJ/mol'),
-    modes = [
-        HarmonicOscillator(frequencies=([223,363,546,575,694,1179,1410,353,444,1253,3145,2782.5,750,1395,475,1775,1000,617,898,1187,200,800,1000,1200,1400,1600],'cm^-1')),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.156089,'amu*angstrom^2'), symmetry=1, barrier=(3.5888,'kJ/mol'), semiclassical=False),
-    ],
-    spinMultiplicity = 1,
-    opticalIsomers = 1,
-    molecularWeight = (158.051,'amu'),
-    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.885846,0.0749641,-8.31343e-05,4.78309e-08,-1.13699e-11,-107328,28.4135], Tmin=(100,'K'), Tmax=(998.383,'K')), NASAPolynomial(coeffs=[11.9337,0.0307009,-1.66318e-05,3.42391e-09,-2.50174e-13,-109534,-24.868], Tmin=(998.383,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-893.266,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + longDistanceInteraction_noncyclic(Cs(F)2-Cs(F)) + group(CsCCFH) + group(Cds-OdOsH) + group(CJ2_singlet-FCs)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.635306,0.110767,-0.000188554,1.605e-07,-5.33488e-11,-118574,32.3795], Tmin=(100,'K'), Tmax=(797.676,'K')), NASAPolynomial(coeffs=[14.8421,0.0255803,-1.41219e-05,2.81295e-09,-1.97451e-13,-120803,-37.2809], Tmin=(797.676,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-987.202,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
 )
 
 species(
@@ -771,82 +49,789 @@ species(
 )
 
 species(
-    label = 'O=COC(F)=C=C(F)F(9686)',
-    structure = adjacencyList("""1  F u0 p3 c0 {6,S}
+    label = 'CF2O(49)',
+    structure = adjacencyList("""1 F u0 p3 c0 {4,S}
+2 F u0 p3 c0 {4,S}
+3 O u0 p2 c0 {4,D}
+4 C u0 p0 c0 {1,S} {2,S} {3,D}
+"""),
+    E0 = (-618.61,'kJ/mol'),
+    modes = [
+        IdealGasTranslation(mass=(65.9917,'amu')),
+        NonlinearRotor(inertia=([42.7382,43.0674,85.8056],'amu*angstrom^2'), symmetry=2),
+        HarmonicOscillator(frequencies=([584.127,619.74,793.429,989.231,1281.66,1989.03],'cm^-1')),
+    ],
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (66.0068,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(2914.22,'J/mol'), sigma=(4.906,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[4.06775,-0.00614966,6.73615e-05,-1.17623e-07,6.56735e-11,-74400.6,7.68563], Tmin=(10,'K'), Tmax=(584.627,'K')), NASAPolynomial(coeffs=[3.15981,0.0116963,-8.27581e-06,2.66621e-09,-3.20585e-13,-74493.3,9.87819], Tmin=(584.627,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-618.61,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(83.1447,'J/(mol*K)'), label="""ODC(F)F""", comment="""Thermo library: CHOF_G4"""),
+)
+
+species(
+    label = 'O=C[C](F)F(234)',
+    structure = adjacencyList("""multiplicity 2
+1 F u0 p3 c0 {4,S}
+2 F u0 p3 c0 {4,S}
+3 O u0 p2 c0 {5,D}
+4 C u1 p0 c0 {1,S} {2,S} {5,S}
+5 C u0 p0 c0 {3,D} {4,S} {6,S}
+6 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-391.269,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([179,346,818,1406,1524,2782.5,750,1395,475,1775,1000],'cm^-1')),
+        HinderedRotor(inertia=(0.55681,'amu*angstrom^2'), symmetry=1, barrier=(31.8674,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (79.0255,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(2992.84,'J/mol'), sigma=(4.8347,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with Tc=467.48 K, Pc=60.09 bar (from Joback method)"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.92143,0.00544306,7.55479e-05,-1.88818e-07,1.40422e-10,-47057,10.1435], Tmin=(10,'K'), Tmax=(452.346,'K')), NASAPolynomial(coeffs=[3.74847,0.0196353,-1.35046e-05,4.31321e-09,-5.19454e-13,-47170.9,9.4087], Tmin=(452.346,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-391.269,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(133.032,'J/(mol*K)'), label="""ODC[C](F)F""", comment="""Thermo library: CHOF_G4"""),
+)
+
+species(
+    label = 'CF2(43)',
+    structure = adjacencyList("""1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {3,S}
+3 C u0 p1 c0 {1,S} {2,S}
+"""),
+    E0 = (-203.712,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([192,594,627],'cm^-1')),
+    ],
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (50.0074,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(897.963,'J/mol'), sigma=(3.977,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.28591,0.0107608,-1.05382e-05,4.89881e-09,-8.86384e-13,-24340.7,13.1348], Tmin=(298,'K'), Tmax=(1300,'K')), NASAPolynomial(coeffs=[5.33121,0.00197748,-9.60248e-07,2.10704e-10,-1.5954e-14,-25190.9,-2.56367], Tmin=(1300,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(-203.712,'kJ/mol'), Cp0=(33.2579,'J/mol/K'), CpInf=(58.2013,'J/mol/K'), label="""CF2""", comment="""Thermo library: halogens"""),
+)
+
+species(
+    label = 'OC(OF)[C](F)F(6688)',
+    structure = adjacencyList("""multiplicity 2
+1 F u0 p3 c0 {7,S}
+2 F u0 p3 c0 {7,S}
+3 F u0 p3 c0 {5,S}
+4 O u0 p2 c0 {6,S} {9,S}
+5 O u0 p2 c0 {3,S} {6,S}
+6 C u0 p0 c0 {4,S} {5,S} {7,S} {8,S}
+7 C u1 p0 c0 {1,S} {2,S} {6,S}
+8 H u0 p0 c0 {6,S}
+9 H u0 p0 c0 {4,S}
+"""),
+    E0 = (-511.149,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,557,1111,1380,1390,370,380,2900,435,190,488,555,1236,1407,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.398116,'amu*angstrom^2'), symmetry=1, barrier=(9.15348,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.398101,'amu*angstrom^2'), symmetry=1, barrier=(9.15312,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(1.28925,'amu*angstrom^2'), symmetry=1, barrier=(29.6425,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (115.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.48571,0.0449182,3.35714e-05,-2.91541e-07,3.19242e-10,-61478.9,12.3546], Tmin=(10,'K'), Tmax=(395.558,'K')), NASAPolynomial(coeffs=[8.52708,0.0264957,-2.00293e-05,6.87674e-09,-8.73401e-13,-62132.5,-10.511], Tmin=(395.558,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-511.149,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(195.39,'J/(mol*K)'), label="""OC(OF)[C](F)F""", comment="""Thermo library: CHOF_G4"""),
+)
+
+species(
+    label = 'OC(F)(OF)C(F)[C](F)F(6717)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {7,S}
+6  O u0 p2 c0 {9,S} {12,S}
+7  O u0 p2 c0 {5,S} {9,S}
+8  C u0 p0 c0 {1,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {2,S} {6,S} {7,S} {8,S}
+10 C u1 p0 c0 {3,S} {4,S} {8,S}
+11 H u0 p0 c0 {8,S}
+12 H u0 p0 c0 {6,S}
+"""),
+    E0 = (-966.693,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,557,1111,259,529,569,1128,1321,1390,3140,375,361,584,565,722,1474,190,488,555,1236,1407,180,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.464359,'amu*angstrom^2'), symmetry=1, barrier=(10.6765,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.464636,'amu*angstrom^2'), symmetry=1, barrier=(10.6829,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.804028,'amu*angstrom^2'), symmetry=1, barrier=(18.4862,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(5.20297,'amu*angstrom^2'), symmetry=1, barrier=(119.627,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.739767,0.114496,-0.000200467,1.7451e-07,-5.87831e-11,-116105,31.9229], Tmin=(100,'K'), Tmax=(822.902,'K')), NASAPolynomial(coeffs=[14.2735,0.0271214,-1.49561e-05,2.95886e-09,-2.06126e-13,-118089,-34.6192], Tmin=(822.902,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-966.693,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(CsCsCsFH) + longDistanceInteraction_noncyclic(Cs(F)-Cs(F)) + group(CsCFOO) + longDistanceInteraction_noncyclic(Cs(F)-Cs(F)) + group(CsCsFFH) + longDistanceInteraction_noncyclic(Cs(F)2-Cs(F)) + radical(Csj(Cs-CsF1sH)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'O[CH]C(F)(F)C(F)(F)OF(6661)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {9,S}
+7  O u0 p2 c0 {10,S} {12,S}
+8  C u0 p0 c0 {1,S} {2,S} {9,S} {10,S}
+9  C u0 p0 c0 {3,S} {4,S} {6,S} {8,S}
+10 C u1 p0 c0 {7,S} {8,S} {11,S}
+11 H u0 p0 c0 {10,S}
+12 H u0 p0 c0 {7,S}
+"""),
+    E0 = (-1000.96,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.223798,0.101149,-0.000165738,1.41321e-07,-4.77887e-11,-120243,31.9382], Tmin=(100,'K'), Tmax=(770.526,'K')), NASAPolynomial(coeffs=[12.6843,0.0291315,-1.57922e-05,3.15221e-09,-2.22664e-13,-122084,-26.0065], Tmin=(770.526,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1000.96,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2sCF) + group(O2s-CsH) + group(CsCsCsFF) + longDistanceInteraction_noncyclic(Cs(F)2-Cs(F)2) + group(CsCFFO) + longDistanceInteraction_noncyclic(Cs(F)2-Cs(F)2) + group(Cs-CsOsHH) + radical(Csj(Cs-F1sF1sCs)(O2s-H)(H))"""),
+)
+
+species(
+    label = 'F(37)',
+    structure = adjacencyList("""multiplicity 2
+1 F u1 p3 c0
+"""),
+    E0 = (72.8916,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (18.9984,'amu'),
+    collisionModel = TransportData(shapeIndex=0, epsilon=(665.158,'J/mol'), sigma=(2.75,'angstroms'), dipoleMoment=(0,'De'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""NIST_Fluorine"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.90371,-0.000635296,2.64735e-07,7.69063e-11,-5.45254e-14,8672.27,2.70828], Tmin=(298,'K'), Tmax=(1400,'K')), NASAPolynomial(coeffs=[2.65117,-0.00014013,5.19236e-08,-8.84954e-12,5.9028e-16,8758.29,4.07857], Tmin=(1400,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(72.8916,'kJ/mol'), Cp0=(20.7862,'J/mol/K'), CpInf=(20.7862,'J/mol/K'), label="""F""", comment="""Thermo library: primaryThermoLibrary"""),
+)
+
+species(
+    label = 'OC([C]F)C(F)(F)OF(6718)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {6,S}
+5  O u0 p2 c0 {7,S} {11,S}
+6  O u0 p2 c0 {4,S} {8,S}
+7  C u0 p0 c0 {5,S} {8,S} {9,S} {10,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {7,S}
+9  C u2 p0 c0 {3,S} {7,S}
+10 H u0 p0 c0 {7,S}
+11 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-596.991,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([1380,1390,370,380,2900,435,223,363,546,575,694,1179,1410,90,150,250,247,323,377,431,433,1065,1274],'cm^-1')),
+        HinderedRotor(inertia=(0.00574099,'amu*angstrom^2'), symmetry=1, barrier=(11.1973,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.000557657,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.000556549,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.0530124,'amu*angstrom^2'), symmetry=1, barrier=(11.1157,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (146.04,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.0610185,0.095136,-0.000151591,1.17079e-07,-3.37409e-11,-71667.6,27.687], Tmin=(100,'K'), Tmax=(659.37,'K')), NASAPolynomial(coeffs=[13.8715,0.0226794,-1.25189e-05,2.5122e-09,-1.7793e-13,-73735,-35.0555], Tmin=(659.37,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-596.991,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(241.12,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFHH) + radical(CsCCl_triplet)"""),
+)
+
+species(
+    label = 'F[C]F(156)',
+    structure = adjacencyList("""multiplicity 3
+1 F u0 p3 c0 {3,S}
+2 F u0 p3 c0 {3,S}
+3 C u2 p0 c0 {1,S} {2,S}
+"""),
+    E0 = (33.7272,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([700.388,993.445,1307.31],'cm^-1')),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (50.0074,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.28591,0.0107608,-1.05382e-05,4.89881e-09,-8.86384e-13,4216.69,13.1348], Tmin=(298,'K'), Tmax=(1300,'K')), NASAPolynomial(coeffs=[5.33121,0.00197748,-9.60248e-07,2.10704e-10,-1.5954e-14,3366.49,-2.56367], Tmin=(1300,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(33.7272,'kJ/mol'), Cp0=(33.2579,'J/mol/K'), CpInf=(58.2013,'J/mol/K'), label="""CF2(T)""", comment="""Thermo library: halogens"""),
+)
+
+species(
+    label = 'O[CH]C(F)(F)OF(5495)',
+    structure = adjacencyList("""multiplicity 2
+1 F u0 p3 c0 {6,S}
+2 F u0 p3 c0 {6,S}
+3 F u0 p3 c0 {4,S}
+4 O u0 p2 c0 {3,S} {6,S}
+5 O u0 p2 c0 {7,S} {9,S}
+6 C u0 p0 c0 {1,S} {2,S} {4,S} {7,S}
+7 C u1 p0 c0 {5,S} {6,S} {8,S}
+8 H u0 p0 c0 {7,S}
+9 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-552.736,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,3615,1277.5,1000,253,525,597,667,842,1178,1324,3025,407.5,1350,352.5,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.402795,'amu*angstrom^2'), symmetry=1, barrier=(9.26105,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.402782,'amu*angstrom^2'), symmetry=1, barrier=(9.26075,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.403446,'amu*angstrom^2'), symmetry=1, barrier=(9.27601,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (115.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.610851,0.0911412,-0.000191878,1.8838e-07,-6.76234e-11,-66372.5,21.9075], Tmin=(100,'K'), Tmax=(876.473,'K')), NASAPolynomial(coeffs=[6.12536,0.0268665,-1.49479e-05,2.8952e-09,-1.95849e-13,-65837,4.59958], Tmin=(876.473,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-552.736,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(220.334,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Csj(Cs-F1sF1sO2s)(O2s-H)(H))"""),
+)
+
+species(
+    label = 'OH(7)',
+    structure = adjacencyList("""multiplicity 2
+1 O u1 p2 c0 {2,S}
+2 H u0 p0 c0 {1,S}
+"""),
+    E0 = (28.3945,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3668.68],'cm^-1')),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (17.0074,'amu'),
+    collisionModel = TransportData(shapeIndex=1, epsilon=(665.16,'J/mol'), sigma=(2.75,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.51457,2.92733e-05,-5.3215e-07,1.01947e-09,-3.85939e-13,3414.25,2.10435], Tmin=(100,'K'), Tmax=(1145.76,'K')), NASAPolynomial(coeffs=[3.07194,0.00060402,-1.39807e-08,-2.13441e-11,2.48061e-15,3579.39,4.57802], Tmin=(1145.76,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(28.3945,'kJ/mol'), Cp0=(29.1007,'J/(mol*K)'), CpInf=(37.4151,'J/(mol*K)'), label="""OH(D)""", comment="""Thermo library: primaryThermoLibrary"""),
+)
+
+species(
+    label = 'FOC(F)(F)C=C(F)F(4973)',
+    structure = adjacencyList("""1  F u0 p3 c0 {7,S}
 2  F u0 p3 c0 {7,S}
-3  F u0 p3 c0 {7,S}
-4  O u0 p2 c0 {6,S} {8,S}
-5  O u0 p2 c0 {8,D}
-6  C u0 p0 c0 {1,S} {4,S} {9,D}
-7  C u0 p0 c0 {2,S} {3,S} {9,D}
-8  C u0 p0 c0 {4,S} {5,D} {10,S}
-9  C u0 p0 c0 {6,D} {7,D}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {7,S}
+7  C u0 p0 c0 {1,S} {2,S} {6,S} {8,S}
+8  C u0 p0 c0 {7,S} {9,D} {10,S}
+9  C u0 p0 c0 {3,S} {4,S} {8,D}
 10 H u0 p0 c0 {8,S}
 """),
-    E0 = (-688.229,'kJ/mol'),
+    E0 = (-858.524,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([197,221,431,657,94,120,354,641,825,1294,2782.5,750,1395,475,1775,1000,540,610,2055,485.769,485.784,485.789],'cm^-1')),
-        HinderedRotor(inertia=(0.000714364,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.000714252,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([557,1111,275,321,533,585,746,850,1103,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413,267.737,267.815],'cm^-1')),
+        HinderedRotor(inertia=(0.298784,'amu*angstrom^2'), symmetry=1, barrier=(15.2413,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.634521,'amu*angstrom^2'), symmetry=1, barrier=(32.449,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 1,
     opticalIsomers = 1,
-    molecularWeight = (138.045,'amu'),
+    molecularWeight = (148.031,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.19477,0.0682948,-9.05115e-05,6.41481e-08,-1.8691e-11,-82679.6,24.4358], Tmin=(100,'K'), Tmax=(827.351,'K')), NASAPolynomial(coeffs=[9.84881,0.0264544,-1.46533e-05,3.0219e-09,-2.20281e-13,-84111.6,-15.6746], Tmin=(827.351,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-688.229,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-(Cds-O2d)(Cds-Cd)) + group(CdCddFO) + group(CdCddFF) + group(Cds-OdOsH) + group(Cdd-CdsCds)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.6881,0.0211397,0.000187466,-5.21693e-07,3.96244e-10,-103252,14.5945], Tmin=(10,'K'), Tmax=(478.832,'K')), NASAPolynomial(coeffs=[7.96478,0.0379937,-3.00443e-05,1.0468e-08,-1.33235e-12,-104265,-9.18287], Tmin=(478.832,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-858.524,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), label="""FOC(F)(F)CDC(F)F""", comment="""Thermo library: CHOF_G4"""),
 )
 
 species(
-    label = 'O=COC(F)(F)C#CF(9695)',
-    structure = adjacencyList("""1  F u0 p3 c0 {6,S}
-2  F u0 p3 c0 {6,S}
-3  F u0 p3 c0 {9,S}
-4  O u0 p2 c0 {6,S} {7,S}
-5  O u0 p2 c0 {7,D}
-6  C u0 p0 c0 {1,S} {2,S} {4,S} {8,S}
-7  C u0 p0 c0 {4,S} {5,D} {10,S}
-8  C u0 p0 c0 {6,S} {9,T}
-9  C u0 p0 c0 {3,S} {8,T}
-10 H u0 p0 c0 {7,S}
+    label = 'FO[C](F)F(2677)',
+    structure = adjacencyList("""multiplicity 2
+1 F u0 p3 c0 {5,S}
+2 F u0 p3 c0 {5,S}
+3 F u0 p3 c0 {4,S}
+4 O u0 p2 c0 {3,S} {5,S}
+5 C u1 p0 c0 {1,S} {2,S} {4,S}
 """),
-    E0 = (-698.982,'kJ/mol'),
+    E0 = (-317.517,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([157,399,436,611,601,744,1127,2782.5,750,1395,475,1775,1000,2175,525,239,401,1367,180,180,973.033],'cm^-1')),
-        HinderedRotor(inertia=(0.00505199,'amu*angstrom^2'), symmetry=1, barrier=(3.39385,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.0802751,'amu*angstrom^2'), symmetry=1, barrier=(54.0608,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(2.35211,'amu*angstrom^2'), symmetry=1, barrier=(54.0797,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([557,1111,493,600,700,1144,1293,180],'cm^-1')),
+        HinderedRotor(inertia=(0.523178,'amu*angstrom^2'), symmetry=1, barrier=(12.0289,'kJ/mol'), semiclassical=False),
     ],
-    spinMultiplicity = 1,
+    spinMultiplicity = 2,
     opticalIsomers = 1,
-    molecularWeight = (138.045,'amu'),
+    molecularWeight = (85.0052,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.23393,0.0667005,-8.94772e-05,6.61084e-08,-2.01354e-11,-83973.8,23.8386], Tmin=(100,'K'), Tmax=(793.239,'K')), NASAPolynomial(coeffs=[9.12637,0.0269045,-1.42285e-05,2.87071e-09,-2.06474e-13,-85226,-12.4102], Tmin=(793.239,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-698.982,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(220.334,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-OdOsH) + group(Ct-CtCs) + group(CtCF)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.66912,0.0316874,-4.80468e-05,3.6426e-08,-1.08808e-11,-38142.7,14.3743], Tmin=(100,'K'), Tmax=(821.786,'K')), NASAPolynomial(coeffs=[7.60337,0.00767068,-4.20998e-06,8.64398e-10,-6.26025e-14,-38953.7,-8.46215], Tmin=(821.786,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-317.517,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(128.874,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CsF1sF1sO2s)"""),
 )
 
 species(
-    label = '[CH]C(F)(F)OC=O(12319)',
+    label = 'OC=C(F)F(3973)',
     structure = adjacencyList("""1 F u0 p3 c0 {5,S}
 2 F u0 p3 c0 {5,S}
-3 O u0 p2 c0 {5,S} {6,S}
-4 O u0 p2 c0 {6,D}
-5 C u0 p0 c0 {1,S} {2,S} {3,S} {7,S}
-6 C u0 p0 c0 {3,S} {4,D} {8,S}
-7 C u0 p1 c0 {5,S} {9,S}
-8 H u0 p0 c0 {6,S}
-9 H u0 p0 c0 {7,S}
+3 O u0 p2 c0 {4,S} {7,S}
+4 C u0 p0 c0 {3,S} {5,D} {6,S}
+5 C u0 p0 c0 {1,S} {2,S} {4,D}
+6 H u0 p0 c0 {4,S}
+7 H u0 p0 c0 {3,S}
 """),
-    E0 = (-416.934,'kJ/mol'),
+    E0 = (-502.96,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([2750,2850,1437.5,1250,1305,750,350,2782.5,750,1395,475,1775,1000,180,180,371.645,569.684,569.794],'cm^-1')),
-        HinderedRotor(inertia=(0.142942,'amu*angstrom^2'), symmetry=1, barrier=(32.9243,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.432,'amu*angstrom^2'), symmetry=1, barrier=(32.9245,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.142908,'amu*angstrom^2'), symmetry=1, barrier=(32.9246,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,3010,987.5,1337.5,450,1655,182,240,577,636,1210,1413],'cm^-1')),
+        HinderedRotor(inertia=(0.552091,'amu*angstrom^2'), symmetry=1, barrier=(12.6937,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 1,
     opticalIsomers = 1,
-    molecularWeight = (108.043,'amu'),
+    molecularWeight = (80.0334,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(3292.1,'J/mol'), sigma=(5.16209,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with Tc=514.22 K, Pc=54.31 bar (from Joback method)"""),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.07053,0.0481394,-5.09817e-05,2.93252e-08,-7.25076e-12,-50080.9,18.9904], Tmin=(100,'K'), Tmax=(941.174,'K')), NASAPolynomial(coeffs=[7.59871,0.0246443,-1.3536e-05,2.80084e-09,-2.05153e-13,-51121.4,-7.34466], Tmin=(941.174,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-416.934,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(195.39,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-Cs(Cds-O2d)) + group(CsCFFO) + group(Cds-OdOsH) + group(CsJ2_singlet-CsH)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.85967,0.00956102,9.95844e-05,-2.79091e-07,2.18422e-10,-60486.4,9.26794], Tmin=(10,'K'), Tmax=(463.499,'K')), NASAPolynomial(coeffs=[6.00669,0.0174593,-1.1501e-05,3.70008e-09,-4.58213e-13,-60969.3,-2.50148], Tmin=(463.499,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(-502.96,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(153.818,'J/(mol*K)'), label="""OCDC(F)F""", comment="""Thermo library: CHOF_G4"""),
+)
+
+species(
+    label = 'H(5)',
+    structure = adjacencyList("""multiplicity 2
+1 H u1 p0 c0
+"""),
+    E0 = (211.805,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (1.00797,'amu'),
+    collisionModel = TransportData(shapeIndex=0, epsilon=(1205.6,'J/mol'), sigma=(2.05,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,-1.84483e-15,2.71425e-18,-1.30028e-21,1.91033e-25,25474.2,-0.444973], Tmin=(100,'K'), Tmax=(3598.68,'K')), NASAPolynomial(coeffs=[2.5,-2.82485e-12,1.07037e-15,-1.78888e-19,1.11248e-23,25474.2,-0.444973], Tmin=(3598.68,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(211.805,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""H""", comment="""Thermo library: primaryThermoLibrary"""),
+)
+
+species(
+    label = 'OC(=C(F)F)C(F)(F)OF(6719)',
+    structure = adjacencyList("""1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {8,S}
+7  O u0 p2 c0 {9,S} {11,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {9,S}
+9  C u0 p0 c0 {7,S} {8,S} {10,D}
+10 C u0 p0 c0 {3,S} {4,S} {9,D}
+11 H u0 p0 c0 {7,S}
+"""),
+    E0 = (-1030.66,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,3615,1277.5,1000,275,321,533,585,746,850,1103,350,440,435,1725,182,240,577,636,1210,1413,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.567907,'amu*angstrom^2'), symmetry=1, barrier=(13.0573,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(1.90584,'amu*angstrom^2'), symmetry=1, barrier=(43.8189,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.300283,'amu*angstrom^2'), symmetry=1, barrier=(6.90409,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (164.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.459357,0.108507,-0.00019312,1.70756e-07,-5.83494e-11,-123810,28.0126], Tmin=(100,'K'), Tmax=(820.475,'K')), NASAPolynomial(coeffs=[13.1566,0.0266094,-1.5025e-05,2.99683e-09,-2.09667e-13,-125522,-31.7995], Tmin=(820.475,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1030.66,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2sCF) + group(O2s-(Cds-Cd)H) + group(CsCFFO) + longDistanceInteraction_noncyclic(Cs(F)2-CdOs) + group(Cds-CdsCsOs) + group(CdCFF) + longDistanceInteraction_noncyclic(Cd(F)2=CdOs)"""),
+)
+
+species(
+    label = 'OC([C](F)F)[C](F)OF(6720)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {6,S}
+5  O u0 p2 c0 {7,S} {11,S}
+6  O u0 p2 c0 {4,S} {8,S}
+7  C u0 p0 c0 {5,S} {8,S} {9,S} {10,S}
+8  C u1 p0 c0 {1,S} {6,S} {7,S}
+9  C u1 p0 c0 {2,S} {3,S} {7,S}
+10 H u0 p0 c0 {7,S}
+11 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-557.941,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,557,1111,1380,1390,370,380,2900,435,395,473,707,1436,190,488,555,1236,1407,222.088,222.088,222.088],'cm^-1')),
+        HinderedRotor(inertia=(0.218107,'amu*angstrom^2'), symmetry=1, barrier=(7.63391,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.218107,'amu*angstrom^2'), symmetry=1, barrier=(7.63391,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.218108,'amu*angstrom^2'), symmetry=1, barrier=(7.63391,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.678283,'amu*angstrom^2'), symmetry=1, barrier=(23.7404,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (146.04,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.261925,0.105668,-0.000195605,1.76824e-07,-6.07377e-11,-66962.8,31.6332], Tmin=(100,'K'), Tmax=(850.42,'K')), NASAPolynomial(coeffs=[11.7572,0.0260322,-1.43899e-05,2.8199e-09,-1.94097e-13,-68171.6,-19.4928], Tmin=(850.42,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-557.941,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(241.12,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFHO) + group(CsCsFFH) + radical(CsCsF1sO2s) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
+)
+
+species(
+    label = '[O]C(F)(F)C(O)[C](F)F(6721)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  O u0 p2 c0 {7,S} {11,S}
+6  O u1 p2 c0 {8,S}
+7  C u0 p0 c0 {5,S} {8,S} {9,S} {10,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {7,S}
+9  C u1 p0 c0 {3,S} {4,S} {7,S}
+10 H u0 p0 c0 {7,S}
+11 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-861.742,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,1380,1390,370,380,2900,435,351,323,533,609,664,892,1120,1201,190,488,555,1236,1407,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.294758,'amu*angstrom^2'), symmetry=1, barrier=(6.77707,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.295203,'amu*angstrom^2'), symmetry=1, barrier=(6.78729,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.292999,'amu*angstrom^2'), symmetry=1, barrier=(6.73663,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (146.04,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.473958,0.0881147,-0.000129893,7.89211e-08,-7.55929e-12,-103527,28.8907], Tmin=(100,'K'), Tmax=(575.974,'K')), NASAPolynomial(coeffs=[12.6454,0.0233073,-1.24728e-05,2.45618e-09,-1.71291e-13,-105256,-25.9541], Tmin=(575.974,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-861.742,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2s-CsH) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(O2sj(Cs-CsF1sF1s)) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'FOC(F)(F)[CH][C](F)F(3881)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {7,S}
+2  F u0 p3 c0 {7,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {7,S}
+7  C u0 p0 c0 {1,S} {2,S} {6,S} {8,S}
+8  C u1 p0 c0 {7,S} {9,S} {10,S}
+9  C u1 p0 c0 {3,S} {4,S} {8,S}
+10 H u0 p0 c0 {8,S}
+"""),
+    E0 = (-602.358,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,253,525,597,667,842,1178,1324,3025,407.5,1350,352.5,190,488,555,1236,1407,180,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.0788916,'amu*angstrom^2'), symmetry=1, barrier=(1.81387,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.077958,'amu*angstrom^2'), symmetry=1, barrier=(1.79241,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.354356,'amu*angstrom^2'), symmetry=1, barrier=(8.14734,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (148.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.296265,0.0917839,-0.000167469,1.52614e-07,-5.32617e-11,-72323.6,30.2577], Tmin=(100,'K'), Tmax=(832.436,'K')), NASAPolynomial(coeffs=[10.2904,0.0251537,-1.38777e-05,2.75736e-09,-1.92365e-13,-73342.8,-12.2533], Tmin=(832.436,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-602.358,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Csj(Cs-F1sF1sO2s)(Cs-F1sF1sH)(H)) + radical(Csj(Cs-CsHH)(F1s)(F1s))"""),
+)
+
+species(
+    label = '[O]C([C](F)F)C(F)(F)OF(6709)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {9,S}
+7  O u1 p2 c0 {8,S}
+8  C u0 p0 c0 {7,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {1,S} {2,S} {6,S} {8,S}
+10 C u1 p0 c0 {3,S} {4,S} {8,S}
+11 H u0 p0 c0 {8,S}
+"""),
+    E0 = (-756.841,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,1380,1390,370,380,2900,435,223,363,546,575,694,1179,1410,190,488,555,1236,1407,324.791,324.803,324.807,324.81],'cm^-1')),
+        HinderedRotor(inertia=(0.382259,'amu*angstrom^2'), symmetry=1, barrier=(28.6177,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.142014,'amu*angstrom^2'), symmetry=1, barrier=(10.6331,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.142015,'amu*angstrom^2'), symmetry=1, barrier=(10.6327,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (164.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.196623,0.102771,-0.000164141,1.22247e-07,-3.15605e-11,-90885.8,30.6556], Tmin=(100,'K'), Tmax=(623.971,'K')), NASAPolynomial(coeffs=[14.562,0.024194,-1.37887e-05,2.78841e-09,-1.97897e-13,-93039.7,-36.0865], Tmin=(623.971,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-756.841,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(245.277,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(CC(C)OJ) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
+)
+
+species(
+    label = '[O]F(128)',
+    structure = adjacencyList("""multiplicity 2
+1 F u0 p3 c0 {2,S}
+2 O u1 p2 c0 {1,S}
+"""),
+    E0 = (102.686,'kJ/mol'),
+    modes = [
+        IdealGasTranslation(mass=(34.9933,'amu')),
+        LinearRotor(inertia=(15.6231,'amu*angstrom^2'), symmetry=1),
+        HarmonicOscillator(frequencies=([1151.69],'cm^-1')),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (34.9978,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.51779,-0.00115859,7.7708e-06,-9.55983e-09,3.74809e-12,12350.1,5.42233], Tmin=(10,'K'), Tmax=(823.913,'K')), NASAPolynomial(coeffs=[3.16214,0.00226288,-1.54389e-06,4.73852e-10,-5.4015e-14,12351.2,6.72012], Tmin=(823.913,'K'), Tmax=(3000,'K'))], Tmin=(10,'K'), Tmax=(3000,'K'), E0=(102.686,'kJ/mol'), Cp0=(29.1007,'J/(mol*K)'), CpInf=(37.4151,'J/(mol*K)'), label="""[O]F""", comment="""Thermo library: CHOF_G4"""),
+)
+
+species(
+    label = 'OC([C](F)F)[C](F)F(6722)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {7,S}
+2  F u0 p3 c0 {7,S}
+3  F u0 p3 c0 {8,S}
+4  F u0 p3 c0 {8,S}
+5  O u0 p2 c0 {6,S} {10,S}
+6  C u0 p0 c0 {5,S} {7,S} {8,S} {9,S}
+7  C u1 p0 c0 {1,S} {2,S} {6,S}
+8  C u1 p0 c0 {3,S} {4,S} {6,S}
+9  H u0 p0 c0 {6,S}
+10 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-694.471,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,1380,1390,370,380,2900,435,146,234,414,562,504,606,1176,1296,1354,1460,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.297568,'amu*angstrom^2'), symmetry=1, barrier=(6.84167,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.295962,'amu*angstrom^2'), symmetry=1, barrier=(6.80474,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(1.2528,'amu*angstrom^2'), symmetry=1, barrier=(28.8044,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (130.041,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.423014,0.0914678,-0.000175515,1.66977e-07,-5.99687e-11,-83409,25.9278], Tmin=(100,'K'), Tmax=(842.178,'K')), NASAPolynomial(coeffs=[8.10414,0.0284166,-1.58934e-05,3.16073e-09,-2.20038e-13,-83760.6,-4.21593], Tmin=(842.178,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-694.471,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Csj(Cs-O2sCsH)(F1s)(F1s)) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'O[CH][C](F)F(3972)',
+    structure = adjacencyList("""multiplicity 3
+1 F u0 p3 c0 {5,S}
+2 F u0 p3 c0 {5,S}
+3 O u0 p2 c0 {4,S} {7,S}
+4 C u1 p0 c0 {3,S} {5,S} {6,S}
+5 C u1 p0 c0 {1,S} {2,S} {4,S}
+6 H u0 p0 c0 {4,S}
+7 H u0 p0 c0 {3,S}
+"""),
+    E0 = (-278.999,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,3025,407.5,1350,352.5,190,488,555,1236,1407,180],'cm^-1')),
+        HinderedRotor(inertia=(0.636551,'amu*angstrom^2'), symmetry=1, barrier=(14.6356,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.635528,'amu*angstrom^2'), symmetry=1, barrier=(14.612,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (80.0334,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.72308,0.0525948,-8.51294e-05,6.61096e-08,-1.96969e-11,-33476.2,16.8524], Tmin=(100,'K'), Tmax=(832.867,'K')), NASAPolynomial(coeffs=[11.1819,0.00716935,-3.32205e-06,6.30394e-10,-4.3141e-14,-35051.8,-27.0516], Tmin=(832.867,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-278.999,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(199.547,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CCsJOH) + radical(Csj(Cs-O2sHH)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'O[C]([C](F)F)C(F)(F)OF(6723)',
+    structure = adjacencyList("""multiplicity 3
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {8,S}
+7  O u0 p2 c0 {9,S} {11,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {9,S}
+9  C u1 p0 c0 {7,S} {8,S} {10,S}
+10 C u1 p0 c0 {3,S} {4,S} {9,S}
+11 H u0 p0 c0 {7,S}
+"""),
+    E0 = (-810.574,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,3615,1277.5,1000,253,525,597,667,842,1178,1324,360,370,350,190,488,555,1236,1407,180,180,180],'cm^-1')),
+        HinderedRotor(inertia=(0.379275,'amu*angstrom^2'), symmetry=1, barrier=(8.72028,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.379159,'amu*angstrom^2'), symmetry=1, barrier=(8.71762,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.972233,'amu*angstrom^2'), symmetry=1, barrier=(22.3536,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.379477,'amu*angstrom^2'), symmetry=1, barrier=(8.72493,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 3,
+    opticalIsomers = 1,
+    molecularWeight = (164.031,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.843385,0.120159,-0.000227974,2.05787e-07,-7.01905e-11,-97328.2,32.5489], Tmin=(100,'K'), Tmax=(855.158,'K')), NASAPolynomial(coeffs=[13.7689,0.025125,-1.44706e-05,2.85305e-09,-1.96117e-13,-98851.6,-29.9554], Tmin=(855.158,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-810.574,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(241.12,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(C2CsJOH) + radical(Csj(Cs-O2sCsH)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'F2(78)',
+    structure = adjacencyList("""1 F u0 p3 c0 {2,S}
+2 F u0 p3 c0 {1,S}
+"""),
+    E0 = (-8.80492,'kJ/mol'),
+    modes = [
+        IdealGasTranslation(mass=(37.9968,'amu')),
+        LinearRotor(inertia=(18.2987,'amu*angstrom^2'), symmetry=2),
+        HarmonicOscillator(frequencies=([1076.6],'cm^-1')),
+    ],
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (37.9968,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.66955,0.00529418,-6.47091e-06,3.91833e-09,-9.38451e-13,-980.801,7.82659], Tmin=(298,'K'), Tmax=(1150,'K')), NASAPolynomial(coeffs=[4.05774,0.000600034,-2.19218e-07,4.31508e-11,-3.12588e-15,-1324.39,0.863214], Tmin=(1150,'K'), Tmax=(3000,'K'))], Tmin=(298,'K'), Tmax=(3000,'K'), E0=(-8.80492,'kJ/mol'), Cp0=(29.1007,'J/mol/K'), CpInf=(37.4151,'J/mol/K'), label="""F2""", comment="""Thermo library: primaryThermoLibrary"""),
+)
+
+species(
+    label = 'O=C(F)C(O)[C](F)F(6724)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {7,S}
+2  F u0 p3 c0 {7,S}
+3  F u0 p3 c0 {8,S}
+4  O u0 p2 c0 {6,S} {10,S}
+5  O u0 p2 c0 {8,D}
+6  C u0 p0 c0 {4,S} {7,S} {8,S} {9,S}
+7  C u1 p0 c0 {1,S} {2,S} {6,S}
+8  C u0 p0 c0 {3,S} {5,D} {6,S}
+9  H u0 p0 c0 {6,S}
+10 H u0 p0 c0 {4,S}
+"""),
+    E0 = (-835.19,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,1380,1390,370,380,2900,435,190,488,555,1236,1407,486,617,768,1157,1926,476.19,482.783],'cm^-1')),
+        HinderedRotor(inertia=(0.503157,'amu*angstrom^2'), symmetry=1, barrier=(13.0662,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.0125352,'amu*angstrom^2'), symmetry=1, barrier=(1.89087,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.344077,'amu*angstrom^2'), symmetry=1, barrier=(13.0552,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (127.042,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.29752,0.0625976,-7.71948e-05,4.81242e-08,-1.19704e-11,-100355,27.5012], Tmin=(100,'K'), Tmax=(976.088,'K')), NASAPolynomial(coeffs=[12.0383,0.0185838,-9.55958e-06,1.93139e-09,-1.3983e-13,-102452,-24.0574], Tmin=(976.088,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-835.19,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(220.334,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(Cs-(Cds-O2d)CsOsH) + group(CsCsFFH) + group(COCsFO) + radical(CsCsF1sF1s)"""),
+)
+
+species(
+    label = 'OC([C](F)F)=C(F)OF(6725)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {6,S}
+5  O u0 p2 c0 {7,S} {10,S}
+6  O u0 p2 c0 {4,S} {8,S}
+7  C u0 p0 c0 {5,S} {8,D} {9,S}
+8  C u0 p0 c0 {1,S} {6,S} {7,D}
+9  C u1 p0 c0 {2,S} {3,S} {7,S}
+10 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-610.193,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,231,791,350,440,435,1725,326,540,652,719,1357,161,297,490,584,780,1358,180],'cm^-1')),
+        HinderedRotor(inertia=(0.152559,'amu*angstrom^2'), symmetry=1, barrier=(3.50763,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.157289,'amu*angstrom^2'), symmetry=1, barrier=(3.61639,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(2.29369,'amu*angstrom^2'), symmetry=1, barrier=(52.7365,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (145.032,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.201321,0.0966261,-0.000183692,1.73047e-07,-6.16767e-11,-73265,28.0958], Tmin=(100,'K'), Tmax=(845.141,'K')), NASAPolynomial(coeffs=[8.62954,0.0296146,-1.66204e-05,3.28546e-09,-2.27698e-13,-73721,-5.41715], Tmin=(845.141,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-610.193,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(220.334,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-(Cds-Cd)H) + group(O2sCF) + group(CsCFFH) + longDistanceInteraction_noncyclic(Cs(F)2-CdOs) + group(Cds-CdsCsOs) + group(CdCFO) + longDistanceInteraction_noncyclic(Cd(F)=CdOs) + radical(Csj(Cd-O2sCd)(F1s)(F1s))"""),
+)
+
+species(
+    label = 'OC([C]F)C(F)(F)OF-2(6726)',
+    structure = adjacencyList("""1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {6,S}
+5  O u0 p2 c0 {7,S} {11,S}
+6  O u0 p2 c0 {4,S} {8,S}
+7  C u0 p0 c0 {5,S} {8,S} {9,S} {10,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {7,S}
+9  C u0 p1 c0 {3,S} {7,S}
+10 H u0 p0 c0 {7,S}
+11 H u0 p0 c0 {5,S}
+"""),
+    E0 = (-601.077,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([3615,1277.5,1000,557,1111,1380,1390,370,380,2900,435,223,363,546,575,694,1179,1410,617,898,1187,254.992,255.657],'cm^-1')),
+        HinderedRotor(inertia=(0.207779,'amu*angstrom^2'), symmetry=1, barrier=(9.80219,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.213394,'amu*angstrom^2'), symmetry=1, barrier=(9.81058,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.208812,'amu*angstrom^2'), symmetry=1, barrier=(9.80547,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.682383,'amu*angstrom^2'), symmetry=1, barrier=(31.7591,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (146.04,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[0.110088,0.0918321,-0.000145104,1.15039e-07,-3.58137e-11,-72158.6,29.1875], Tmin=(100,'K'), Tmax=(791.006,'K')), NASAPolynomial(coeffs=[14.0613,0.0212733,-1.12842e-05,2.23833e-09,-1.57874e-13,-74365.4,-34.8462], Tmin=(791.006,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-601.077,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(241.12,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CJ2_singlet-FCs)"""),
+)
+
+species(
+    label = 'O[C](C(F)F)C(F)(F)OF(6713)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {8,S}
+2  F u0 p3 c0 {8,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {9,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {8,S}
+7  O u0 p2 c0 {10,S} {12,S}
+8  C u0 p0 c0 {1,S} {2,S} {6,S} {10,S}
+9  C u0 p0 c0 {3,S} {4,S} {10,S} {11,S}
+10 C u1 p0 c0 {7,S} {8,S} {9,S}
+11 H u0 p0 c0 {9,S}
+12 H u0 p0 c0 {7,S}
+"""),
+    E0 = (-1012.44,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.815698,0.116534,-0.000206432,1.79953e-07,-6.0393e-11,-121606,31.4025], Tmin=(100,'K'), Tmax=(832.761,'K')), NASAPolynomial(coeffs=[14.6168,0.0261752,-1.44368e-05,2.84501e-09,-1.97287e-13,-123613,-36.847], Tmin=(832.761,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1012.44,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(C2CsJOH)"""),
+)
+
+species(
+    label = '[O]C(C(F)F)C(F)(F)OF(6592)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {6,S}
+6  O u0 p2 c0 {5,S} {9,S}
+7  O u1 p2 c0 {8,S}
+8  C u0 p0 c0 {7,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {1,S} {2,S} {6,S} {8,S}
+10 C u0 p0 c0 {3,S} {4,S} {8,S} {12,S}
+11 H u0 p0 c0 {8,S}
+12 H u0 p0 c0 {10,S}
+"""),
+    E0 = (-958.71,'kJ/mol'),
+    modes = [
+        HarmonicOscillator(frequencies=([557,1111,1380,1390,370,380,2900,435,223,363,546,575,694,1179,1410,235,523,627,1123,1142,1372,1406,3097,299.53,299.753,300.148,300.348],'cm^-1')),
+        HinderedRotor(inertia=(0.177018,'amu*angstrom^2'), symmetry=1, barrier=(11.3032,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.451041,'amu*angstrom^2'), symmetry=1, barrier=(28.9651,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.240589,'amu*angstrom^2'), symmetry=1, barrier=(15.2578,'kJ/mol'), semiclassical=False),
+    ],
+    spinMultiplicity = 2,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    collisionModel = TransportData(shapeIndex=2, epsilon=(3545.48,'J/mol'), sigma=(5.86849,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with Tc=553.80 K, Pc=39.81 bar (from Joback method)"""),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.228094,0.100318,-0.000149794,1.12634e-07,-3.34955e-11,-115160,29.6965], Tmin=(100,'K'), Tmax=(824.486,'K')), NASAPolynomial(coeffs=[15.1555,0.0256843,-1.40112e-05,2.84136e-09,-2.04148e-13,-117697,-41.5513], Tmin=(824.486,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-958.71,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFH) + radical(CC(C)OJ)"""),
+)
+
+species(
+    label = '[O]C(F)(F)C(O)C(F)(F)F(6727)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {10,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {10,S}
+6  O u0 p2 c0 {8,S} {12,S}
+7  O u1 p2 c0 {9,S}
+8  C u0 p0 c0 {6,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {1,S} {2,S} {7,S} {8,S}
+10 C u0 p0 c0 {3,S} {4,S} {5,S} {8,S}
+11 H u0 p0 c0 {8,S}
+12 H u0 p0 c0 {6,S}
+"""),
+    E0 = (-1286.43,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.00224495,0.0938004,-0.000135716,9.86848e-08,-2.82797e-11,-154583,29.26], Tmin=(100,'K'), Tmax=(856.333,'K')), NASAPolynomial(coeffs=[15.1141,0.0231923,-1.2038e-05,2.40203e-09,-1.71372e-13,-157172,-41.3237], Tmin=(856.333,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-1286.43,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(270.22,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2s-CsH) + group(Cs-CsCsOsH) + group(CsCFFO) + group(CsCsFFF) + longDistanceInteraction_noncyclic(Cs(F)3-CsOs) + longDistanceInteraction_noncyclic(Cs(F)3-R-Cs(F)2) + radical(O2sj(Cs-CsF1sF1s))"""),
+)
+
+species(
+    label = 'OC([C](F)OF)C(F)(F)F(6728)',
+    structure = adjacencyList("""multiplicity 2
+1  F u0 p3 c0 {9,S}
+2  F u0 p3 c0 {9,S}
+3  F u0 p3 c0 {9,S}
+4  F u0 p3 c0 {10,S}
+5  F u0 p3 c0 {7,S}
+6  O u0 p2 c0 {8,S} {12,S}
+7  O u0 p2 c0 {5,S} {10,S}
+8  C u0 p0 c0 {6,S} {9,S} {10,S} {11,S}
+9  C u0 p0 c0 {1,S} {2,S} {3,S} {8,S}
+10 C u1 p0 c0 {4,S} {7,S} {8,S}
+11 H u0 p0 c0 {8,S}
+12 H u0 p0 c0 {6,S}
+"""),
+    E0 = (-994.837,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+    molecularWeight = (165.039,'amu'),
+    energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[-0.553502,0.109746,-0.000189799,1.64475e-07,-5.53113e-11,-119496,31.4359], Tmin=(100,'K'), Tmax=(819.853,'K')), NASAPolynomial(coeffs=[13.7979,0.0268618,-1.46173e-05,2.88489e-09,-2.00977e-13,-121417,-32.3137], Tmin=(819.853,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-994.837,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(266.063,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(O2s-CsH) + group(O2sCF) + group(Cs-CsCsOsH) + group(CsCFHO) + group(CsCsFFF) + longDistanceInteraction_noncyclic(Cs(F)3-CsOs) + radical(CsCsF1sO2s)"""),
 )
 
 species(
@@ -878,376 +863,391 @@ species(
 
 transitionState(
     label = 'TS1',
-    E0 = (-430.116,'kJ/mol'),
+    E0 = (-506.926,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS2',
-    E0 = (-373.104,'kJ/mol'),
+    E0 = (-67.6927,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS3',
-    E0 = (-128.837,'kJ/mol'),
+    E0 = (-217.777,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS4',
-    E0 = (79.8649,'kJ/mol'),
+    E0 = (-377.351,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS5',
-    E0 = (-320.731,'kJ/mol'),
+    E0 = (-74.184,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS6',
-    E0 = (-368.795,'kJ/mol'),
+    E0 = (-69.0925,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS7',
-    E0 = (-354.647,'kJ/mol'),
+    E0 = (-380.213,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS8',
-    E0 = (-111.522,'kJ/mol'),
+    E0 = (-362.554,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS9',
-    E0 = (-345.447,'kJ/mol'),
+    E0 = (-366.872,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS10',
-    E0 = (-149.96,'kJ/mol'),
+    E0 = (-35.1337,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS11',
-    E0 = (-152.231,'kJ/mol'),
+    E0 = (-328.666,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS12',
-    E0 = (-108.403,'kJ/mol'),
+    E0 = (-124.048,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS13',
-    E0 = (-227.447,'kJ/mol'),
+    E0 = (-95.1207,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS14',
-    E0 = (-206.351,'kJ/mol'),
+    E0 = (-141.869,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS15',
-    E0 = (-155.329,'kJ/mol'),
+    E0 = (-146.6,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS16',
-    E0 = (-146.176,'kJ/mol'),
+    E0 = (-147.154,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS17',
-    E0 = (-224.19,'kJ/mol'),
+    E0 = (-312.16,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS18',
-    E0 = (-365.322,'kJ/mol'),
+    E0 = (-259.704,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS19',
-    E0 = (-303.315,'kJ/mol'),
+    E0 = (-78.2698,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS20',
-    E0 = (-257.74,'kJ/mol'),
+    E0 = (-304.421,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS21',
-    E0 = (-264.036,'kJ/mol'),
+    E0 = (-363.11,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS22',
-    E0 = (-172.544,'kJ/mol'),
+    E0 = (-508.794,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 transitionState(
     label = 'TS23',
-    E0 = (-95.1011,'kJ/mol'),
+    E0 = (-456.757,'kJ/mol'),
+    spinMultiplicity = 1,
+    opticalIsomers = 1,
+)
+
+transitionState(
+    label = 'TS24',
+    E0 = (-313.566,'kJ/mol'),
     spinMultiplicity = 1,
     opticalIsomers = 1,
 )
 
 reaction(
     label = 'reaction1',
-    reactants = ['O=COC(F)(F)C=C(F)F(7101)'],
-    products = ['CO2(14)', 'FC(F)=CC(F)F(2834)'],
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['HF(38)', 'CF2O(49)', 'O=C[C](F)F(234)'],
     transitionState = 'TS1',
-    kinetics = Arrhenius(A=(2.8e+12,'s^-1'), n=0, Ea=(202.328,'kJ/mol'), T0=(1,'K'), Tmin=(500,'K'), Tmax=(1500,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_1R!H->C_N-2R!H->C_Ext-1C-R',), comment="""Estimated from node Root_1R!H->C_N-2R!H->C_Ext-1C-R"""),
+    kinetics = Arrhenius(A=(0.00285451,'s^-1'), n=4.62568, Ea=(30.3599,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.3917696014098424, var=52.52930589142705, Tref=1000.0, N=14, data_mean=0.0, correlation='Root',), comment="""Estimated from node Root"""),
 )
 
 reaction(
     label = 'reaction2',
-    reactants = ['CO(13)', 'OC(F)(F)C=C(F)F(2619)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['CF2(43)', 'OC(OF)[C](F)F(6688)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS2',
-    kinetics = Arrhenius(A=(1.27e-07,'m^3/(mol*s)'), n=3.7, Ea=(227.489,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1COCbCdCsCtHNOSSidSis->Cs_2Br1sCbCdCl1sCsCtF1sHI1sNSSidSis->H_1COCbCdCtHNOSSidSis->O',), comment="""Estimated from node Root_N-1COCbCdCsCtHNOSSidSis->Cs_2Br1sCbCdCl1sCsCtF1sHI1sNSSidSis->H_1COCbCdCtHNOSSidSis->O"""),
+    kinetics = Arrhenius(A=(1.40908e-07,'m^3/(mol*s)'), n=3.45227, Ea=(197.253,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='CO_2Br1sCl1sF1sHI1s->F1s_3Br1sCCl1sF1sHI1s->F1s',), comment="""Estimated from node CO_2Br1sCl1sF1sHI1s->F1s_3Br1sCCl1sF1sHI1s->F1s"""),
 )
 
 reaction(
     label = 'reaction3',
-    reactants = ['CF2(43)', 'O=COC=C(F)F(349)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OC(F)(OF)C(F)[C](F)F(6717)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS3',
-    kinetics = Arrhenius(A=(3.50469e+53,'m^3/(mol*s)'), n=-13.541, Ea=(200.926,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=1.513119107657762, var=99.27123869380007, Tref=1000.0, N=63, data_mean=0.0, correlation='Root',), comment="""Estimated from node Root"""),
+    kinetics = Arrhenius(A=(1e+13,'s^-1'), n=0, Ea=(299,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Exact match found for rate rule [OF]
+Euclidian distance = 0
+family: 1,2_XY_interchange"""),
 )
 
 reaction(
     label = 'reaction4',
-    reactants = ['O=COF(342)', 'F[C]C=C(F)F-2(6976)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['O[CH]C(F)(F)C(F)(F)OF(6661)'],
     transitionState = 'TS4',
-    kinetics = Arrhenius(A=(2.13916e+09,'m^3/(mol*s)'), n=-1.00842, Ea=(10.4433,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.17406617270594374, var=16.167420070870673, Tref=1000.0, N=4, data_mean=0.0, correlation='OHOY',), comment="""Estimated from node OHOY"""),
+    kinetics = Arrhenius(A=(6.55606e+10,'s^-1'), n=0.64, Ea=(159.935,'kJ/mol'), T0=(1,'K'), comment="""Estimated using an average for rate rule [cCs(-HR!H)CJ;CsJ;C]
+Euclidian distance = 0
+family: 1,2_shiftC"""),
 )
 
 reaction(
     label = 'reaction5',
-    reactants = ['O=COC(F)=CC(F)(F)F(12309)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F(37)', 'OC([C]F)C(F)(F)OF(6718)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS5',
-    kinetics = Arrhenius(A=(1.1189e+12,'s^-1'), n=0.63878, Ea=(305.642,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='F_Ext-2R!H-R',), comment="""Estimated from node F_Ext-2R!H-R
-Multiplied by reaction path degeneracy 3.0"""),
+    kinetics = Arrhenius(A=(1e+07,'m^3/(mol*s)'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [H/Val7_rad;Birad] for rate rule [Val7_rad;Birad]
+Euclidian distance = 1.0
+family: Birad_R_Recombination"""),
 )
 
 reaction(
     label = 'reaction6',
-    reactants = ['FC1(F)[CH]C(F)(F)O[CH]O1(12310)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F[C]F(156)', 'O[CH]C(F)(F)OF(5495)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS6',
-    kinetics = Arrhenius(A=(2e+13,'s^-1'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(1500,'K'), comment="""Estimated using template [RJJ] for rate rule [R6JJ]
-Euclidian distance = 1.0
-Multiplied by reaction path degeneracy 2.0
-family: 1,4_Cyclic_birad_scission"""),
+    kinetics = Arrhenius(A=(2.04495e+06,'m^3/(mol*s)'), n=0.382229, Ea=(0,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [Y_rad;Birad] for rate rule [C_rad/H/CsO;Birad]
+Euclidian distance = 4.0
+family: Birad_R_Recombination
+Ea raised from -1.7 to 0 kJ/mol."""),
 )
 
 reaction(
     label = 'reaction7',
-    reactants = ['O=[C]OC(F)(F)C[C](F)F(7586)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OH(7)', 'FOC(F)(F)C=C(F)F(4973)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS7',
-    kinetics = Arrhenius(A=(1.02844e+09,'s^-1'), n=0.311, Ea=(24.9733,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [R4;Y_rad;XH_Rrad] for rate rule [R4radExo;Y_rad;XH_Rrad]
-Euclidian distance = 1.0
-Multiplied by reaction path degeneracy 2.0
-family: Intra_Disproportionation"""),
+    kinetics = Arrhenius(A=(565.393,'m^3/(mol*s)'), n=1.28408, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=-0.06277471317878429, var=1.0052381843076323, Tref=1000.0, N=8, data_mean=0.0, correlation='Root_N-3R-inRing_N-3R->C_N-1R!H->N_N-2R!H->O_N-3BrClFNOS->Cl_N-2CNS->N_N-3BrFNOS->N_N-3BrFOS->F_Ext-2CS-R',), comment="""Estimated from node Root_N-3R-inRing_N-3R->C_N-1R!H->N_N-2R!H->O_N-3BrClFNOS->Cl_N-2CNS->N_N-3BrFNOS->N_N-3BrFOS->F_Ext-2CS-R"""),
 )
 
 reaction(
     label = 'reaction8',
-    reactants = ['[O]COC(F)(F)[C]=C(F)F(12311)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['FO[C](F)F(2677)', 'OC=C(F)F(3973)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS8',
-    kinetics = Arrhenius(A=(8.96625e+08,'s^-1'), n=0.311, Ea=(39.225,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [R4;Y_rad_De;XH_Rrad] for rate rule [R4radExo;Y_rad_De;XH_Rrad]
-Euclidian distance = 1.0
-Multiplied by reaction path degeneracy 2.0
-family: Intra_Disproportionation"""),
+    kinetics = Arrhenius(A=(0.310487,'m^3/(mol*s)'), n=1.79149, Ea=(8.00682,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=-0.27712170538623165, var=2.20453978455454, Tref=1000.0, N=288, data_mean=0.0, correlation='Root_N-3R-inRing_Ext-3R-R_N-Sp-4R!H=3R_3R->C_Ext-1R!H-R_N-5R!H-inRing',), comment="""Estimated from node Root_N-3R-inRing_Ext-3R-R_N-Sp-4R!H=3R_3R->C_Ext-1R!H-R_N-5R!H-inRing"""),
 )
 
 reaction(
-    label = 'reaction5',
-    reactants = ['O=[C]OC(F)(F)[CH]C(F)F(7107)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    label = 'reaction9',
+    reactants = ['H(5)', 'OC(=C(F)F)C(F)(F)OF(6719)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS9',
-    kinetics = Arrhenius(A=(2.1261e+09,'s^-1'), n=0.137, Ea=(24.9733,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [R5;Y_rad;XH_Rrad] for rate rule [R5radEndo;Y_rad;XH_Rrad]
-Euclidian distance = 1.0
-family: Intra_Disproportionation"""),
+    kinetics = Arrhenius(A=(56.8734,'m^3/(mol*s)'), n=1.75834, Ea=(2.07052,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.2648472359903826, var=0.02782886759889551, Tref=1000.0, N=2, data_mean=0.0, correlation='Root_3R->H_N-2R!H->N_N-1R!H->N_N-2COS->O_N-2CS-inRing_Ext-1COS-R_N-4R!H-inRing_4R!H-u0_Ext-2CS-R_Sp-2CS=1CCOSS_N-5R!H-inRing_Sp-5R!H-2CS_Ext-2CS-R_4R!H->C_Sp-4C-1COS_Ext-1COS-R_N-6R!H-inRing_N-7R!H-inRing_Ext-4C-R_N-Sp-8R!H#4C',), comment="""Estimated from node Root_3R->H_N-2R!H->N_N-1R!H->N_N-2COS->O_N-2CS-inRing_Ext-1COS-R_N-4R!H-inRing_4R!H-u0_Ext-2CS-R_Sp-2CS=1CCOSS_N-5R!H-inRing_Sp-5R!H-2CS_Ext-2CS-R_4R!H->C_Sp-4C-1COS_Ext-1COS-R_N-6R!H-inRing_N-7R!H-inRing_Ext-4C-R_N-Sp-8R!H#4C"""),
 )
 
 reaction(
     label = 'reaction10',
-    reactants = ['O[CH]OC(F)(F)[C]=C(F)F(12312)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F(37)', 'OC([C](F)F)[C](F)OF(6720)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS10',
-    kinetics = Arrhenius(A=(1.85329e+09,'s^-1'), n=0.137, Ea=(39.225,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [R5;Y_rad_De;XH_Rrad] for rate rule [R5radEndo;Y_rad_De;XH_Rrad]
-Euclidian distance = 1.0
-family: Intra_Disproportionation"""),
+    kinetics = Arrhenius(A=(2.63131e-11,'m^3/(mol*s)'), n=4.71246, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_Ext-2CF-R_Ext-4R!H-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_Ext-2CF-R_Ext-4R!H-R
+Ea raised from -42.6 to 0.0 kJ/mol."""),
 )
 
 reaction(
     label = 'reaction11',
-    reactants = ['F(37)', 'O=COC(F)=C[C](F)F(12313)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F(37)', '[O]C(F)(F)C(O)[C](F)F(6721)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS11',
-    kinetics = Arrhenius(A=(1e+06,'m^3/(mol*s)'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_N-2CF->C',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_N-2CF->C
-Ea raised from -0.0 to 0.0 kJ/mol."""),
+    kinetics = Arrhenius(A=(9.04e+06,'m^3/(mol*s)'), n=2.17087e-08, Ea=(10.2686,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R"""),
 )
 
 reaction(
     label = 'reaction12',
-    reactants = ['F(37)', 'O=COC(F)(F)C=[C]F(12314)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OH(7)', 'FOC(F)(F)[CH][C](F)F(3881)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS12',
-    kinetics = Arrhenius(A=(1e+06,'m^3/(mol*s)'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_N-2CF->C',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_N-2CF->C"""),
+    kinetics = Arrhenius(A=(7.7e+07,'m^3/(mol*s)'), n=0, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_2R->C_Ext-2C-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_2R->C_Ext-2C-R"""),
 )
 
 reaction(
     label = 'reaction13',
-    reactants = ['[O]C=O(339)', 'F[C](F)C=C(F)F(3983)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['H(5)', '[O]C([C](F)F)C(F)(F)OF(6709)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS13',
-    kinetics = Arrhenius(A=(3.616e+07,'m^3/(mol*s)'), n=2.17087e-08, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R
-Multiplied by reaction path degeneracy 4.0"""),
+    kinetics = Arrhenius(A=(2.21037e+06,'m^3/(mol*s)'), n=0.349925, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_2BrCClFHNO->O_Ext-2O-R_N-3R!H->Cl_3BrCFINOPSSi->C',), comment="""Estimated from node Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_2BrCClFHNO->O_Ext-2O-R_N-3R!H->Cl_3BrCFINOPSSi->C"""),
 )
 
 reaction(
     label = 'reaction14',
-    reactants = ['HCO(15)', '[O]C(F)(F)C=C(F)F(2620)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['[O]F(128)', 'OC([C](F)F)[C](F)F(6722)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS14',
-    kinetics = Arrhenius(A=(7.38316e+06,'m^3/(mol*s)'), n=1.31229e-07, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=-0.016021952005170214, var=0.3543710496450803, Tref=1000.0, N=2, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C"""),
+    kinetics = Arrhenius(A=(1.808e+07,'m^3/(mol*s)'), n=2.17087e-08, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_1BrCFOS->O_Ext-1O-R_N-3R!H->O_Ext-2R-R_2R->C_Ext-2C-R_Ext-2C-R
+Multiplied by reaction path degeneracy 2.0"""),
 )
 
 reaction(
     label = 'reaction15',
-    reactants = ['CF2CH(73)', 'O=CO[C](F)F(2722)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['FO[C](F)F(2677)', 'O[CH][C](F)F(3972)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS15',
     kinetics = Arrhenius(A=(2.63131e-11,'m^3/(mol*s)'), n=4.71246, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_Ext-2CF-R_Ext-4R!H-R',), comment="""Estimated from node Root_N-1R->H_N-1BrCClFINOPSSi->N_N-1BrCClFOS->Cl_N-1BrCFOS->O_N-1BrCFS-inRing_1BrCFS->C_N-2R->S_N-2BrCF->Br_Ext-1C-R_3R!H->F_Ext-2CF-R_Ext-4R!H-R
-Ea raised from -37.2 to 0.0 kJ/mol."""),
+Ea raised from -14.7 to 0.0 kJ/mol."""),
 )
 
 reaction(
     label = 'reaction16',
-    reactants = ['H(5)', 'O=COC(F)(F)[C]=C(F)F(12315)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['H(5)', 'O[C]([C](F)F)C(F)(F)OF(6723)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS16',
-    kinetics = Arrhenius(A=(2.88633e+07,'m^3/(mol*s)'), n=0.213913, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=8.197906922440378e-05, var=0.01210657880115639, Tref=1000.0, N=9, data_mean=0.0, correlation='Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_N-3R!H->F_3BrCClINOPSSi->C_Ext-2C-R_N-3C-inRing_Ext-3C-R_Ext-5R!H-R',), comment="""Estimated from node Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_N-3R!H->F_3BrCClINOPSSi->C_Ext-2C-R_N-3C-inRing_Ext-3C-R_Ext-5R!H-R"""),
+    kinetics = Arrhenius(A=(1e+07,'m^3/(mol*s)'), n=0, Ea=(1.69912,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_3R!H->F_Ext-2C-R_4R!H->C_Ext-4C-R_N-5R!H->Cl_N-5BrCFINOPSSi->Br_5CF->C',), comment="""Estimated from node Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_3R!H->F_Ext-2C-R_4R!H->C_Ext-4C-R_N-5R!H->Cl_N-5BrCFINOPSSi->Br_5CF->C"""),
 )
 
 reaction(
     label = 'reaction17',
-    reactants = ['H(5)', 'O=[C]OC(F)(F)C=C(F)F(7585)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F2(78)', 'O=C(F)C(O)[C](F)F(6724)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS17',
-    kinetics = Arrhenius(A=(2.31504e+12,'m^3/(mol*s)'), n=-2.20453, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_N-3R!H->F_N-3BrCClINOPSSi->C_N-3ClOS->S_3ClO->O',), comment="""Estimated from node Root_1R->H_N-2R->S_N-2BrCClFHNO-inRing_N-2BrCClFHNO->O_N-2CHN->N_2CH->C_Ext-2C-R_N-3R!H->F_N-3BrCClINOPSSi->C_N-3ClOS->S_3ClO->O"""),
+    kinetics = Arrhenius(A=(0.000118654,'m^3/(mol*s)'), n=2.63647, Ea=(81.9182,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='YY',), comment="""Estimated from node YY
+Multiplied by reaction path degeneracy 2.0"""),
 )
 
 reaction(
     label = 'reaction18',
-    reactants = ['O=COC(F)(F)C=C(F)F(7101)'],
-    products = ['O=CO(2794)', 'FC(F)=C=C(F)F(12316)'],
+    reactants = ['HF(38)', 'OC([C](F)F)=C(F)OF(6725)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS18',
-    kinetics = Arrhenius(A=(4.45626e+12,'s^-1'), n=0, Ea=(267.122,'kJ/mol'), T0=(1,'K'), Tmin=(500,'K'), Tmax=(1500,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-1R!H->C_N-5R!H->N_Ext-2R!H-R_1BrClFINOPSSi->O_Ext-2R!H-R_Ext-4R!H-R',), comment="""Estimated from node Root_N-1R!H->C_N-5R!H->N_Ext-2R!H-R_1BrClFINOPSSi->O_Ext-2R!H-R_Ext-4R!H-R"""),
+    kinetics = Arrhenius(A=(4.14111,'m^3/(mol*s)'), n=1.29695, Ea=(181.687,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='HF_Ext-3COCdCddCtO2d-R_Ext-4COCdCddCtO2d-R_6R!H->F_Ext-3COCdCddCtO2d-R',), comment="""Estimated from node HF_Ext-3COCdCddCtO2d-R_Ext-4COCdCddCtO2d-R_6R!H->F_Ext-3COCdCddCtO2d-R"""),
 )
 
 reaction(
     label = 'reaction19',
-    reactants = ['O=COC(F)(F)[C]C(F)F(12317)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['F(37)', 'OC([C]F)C(F)(F)OF-2(6726)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS19',
-    kinetics = Arrhenius(A=(3.33333e+12,'s^-1'), n=8.2394e-08, Ea=(28.2551,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='CCH_Ext-3C-R_N-4R!H->Br_N-4CClFINOPSSi->F_N-1C-inRing',), comment="""Estimated from node CCH_Ext-3C-R_N-4R!H->Br_N-4CClFINOPSSi->F_N-1C-inRing"""),
+    kinetics = Arrhenius(A=(518506,'m^3/(mol*s)'), n=0.4717, Ea=(0,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='Root_N-3R->H_N-2Br1sCl1sF1s->Cl1s_3BrCClFINOPSSi->F',), comment="""Estimated from node Root_N-3R->H_N-2Br1sCl1sF1s->Cl1s_3BrCClFINOPSSi->F"""),
 )
 
 reaction(
     label = 'reaction20',
-    reactants = ['O=COC(F)(F)C(F)[C]F(12318)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['CF2(43)', 'O[CH]C(F)(F)OF(5495)'],
+    products = ['OC([C](F)F)C(F)(F)OF(6588)'],
     transitionState = 'TS20',
-    kinetics = Arrhenius(A=(1.91033e+10,'s^-1'), n=0.827, Ea=(109.981,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='CCY',), comment="""Estimated from node CCY"""),
+    kinetics = Arrhenius(A=(0.00976185,'m^3/(mol*s)'), n=2.64543, Ea=(2.11154,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=-0.24524072153041726, var=3.368891203868511, Tref=1000.0, N=3, data_mean=0.0, correlation='Root_N-3R->H_Ext-3BrCClFINOPSSi-R_3BrCClFINOPSSi->C_2Br1sCl1sF1s->F1s',), comment="""Estimated from node Root_N-3R->H_Ext-3BrCClFINOPSSi-R_3BrCClFINOPSSi->C_2Br1sCl1sF1s->F1s"""),
 )
 
 reaction(
     label = 'reaction21',
-    reactants = ['HF(38)', 'O=COC(F)=C=C(F)F(9686)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['O[C](C(F)F)C(F)(F)OF(6713)'],
     transitionState = 'TS21',
-    kinetics = Arrhenius(A=(2676.63,'m^3/(mol*s)'), n=0.732206, Ea=(179.761,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.13214706218215122, var=14.38614219007748, Tref=1000.0, N=10, data_mean=0.0, correlation='HF_Ext-3COCdCddCtO2d-R',), comment="""Estimated from node HF_Ext-3COCdCddCtO2d-R"""),
+    kinetics = Arrhenius(A=(9.06381e+10,'s^-1'), n=0.647667, Ea=(174.177,'kJ/mol'), T0=(1,'K'), comment="""Estimated using template [R2H_S;C_rad_out_noH;Cs_H_out_NonDe] for rate rule [R2H_S;C_rad_out_noH;Cs_H_out_NDMustO]
+Euclidian distance = 1.0
+family: intra_H_migration"""),
 )
 
 reaction(
     label = 'reaction22',
-    reactants = ['HF(38)', 'O=COC(F)(F)C#CF(9695)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['[O]C(C(F)F)C(F)(F)OF(6592)'],
     transitionState = 'TS22',
-    kinetics = Arrhenius(A=(1.64483e+40,'m^3/(mol*s)'), n=-10.004, Ea=(282.007,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='HF_Ext-3COCdCddCtO2d-R_N-3COCdCddCtO2d->Cd',), comment="""Estimated from node HF_Ext-3COCdCddCtO2d-R_N-3COCdCddCtO2d->Cd"""),
+    kinetics = Arrhenius(A=(5.248e+06,'s^-1'), n=0.992, Ea=(28.4919,'kJ/mol'), T0=(1,'K'), comment="""From training reaction 441 used for R3H_SS_Cs;C_rad_out_noH;O_H_out
+Exact match found for rate rule [R3H_SS_Cs;C_rad_out_noH;O_H_out]
+Euclidian distance = 0
+family: intra_H_migration
+Ea raised from 27.7 to 28.5 kJ/mol to match endothermicity of reaction."""),
 )
 
 reaction(
     label = 'reaction23',
-    reactants = ['CF2(43)', '[CH]C(F)(F)OC=O(12319)'],
-    products = ['O=COC(F)(F)C=C(F)F(7101)'],
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['[O]C(F)(F)C(O)C(F)(F)F(6727)'],
     transitionState = 'TS23',
-    kinetics = Arrhenius(A=(3.66533e+06,'cm^3/(mol*s)'), n=1.53, Ea=(0,'kJ/mol'), T0=(1,'K'), comment="""From training reaction 6 used for CF2
-Exact match found for rate rule [CF2]
-Euclidian distance = 0
-family: halocarbene_recombination_double"""),
+    kinetics = Arrhenius(A=(1.64853e+07,'s^-1'), n=1.15307, Ea=(80.5294,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='R5nF',), comment="""Estimated from node R5nF"""),
+)
+
+reaction(
+    label = 'reaction24',
+    reactants = ['OC([C](F)F)C(F)(F)OF(6588)'],
+    products = ['OC([C](F)OF)C(F)(F)F(6728)'],
+    transitionState = 'TS24',
+    kinetics = Arrhenius(A=(0.0186161,'s^-1'), n=4.16824, Ea=(223.72,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2000,'K'), uncertainty=RateUncertainty(mu=0.0, var=33.13686319048999, Tref=1000.0, N=1, data_mean=0.0, correlation='R3F',), comment="""Estimated from node R3F
+Multiplied by reaction path degeneracy 2.0"""),
 )
 
 network(
     label = 'PDepNetwork #1941',
     isomers = [
-        'O=COC(F)(F)C=C(F)F(7101)',
+        'OC([C](F)F)C(F)(F)OF(6588)',
     ],
     reactants = [
-        ('CO2(14)', 'FC(F)=CC(F)F(2834)'),
+        ('HF(38)', 'CF2O(49)', 'O=C[C](F)F(234)'),
     ],
     bathGas = {
         'N2': 0.5,

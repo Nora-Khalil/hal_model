@@ -9,15 +9,15 @@ species(
 """),
     E0 = (-39.6093,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([257,409,1143,1361,2944,180,1140.51,1140.53,1140.68,1140.85,2918.18],'cm^-1')),
-        HinderedRotor(inertia=(0.196825,'amu*angstrom^2'), symmetry=1, barrier=(4.52539,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([257,409,1143,1361,2944,180,1140.59,1140.61,1140.62,1140.73,2918.19],'cm^-1')),
+        HinderedRotor(inertia=(0.196823,'amu*angstrom^2'), symmetry=1, barrier=(4.52534,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 1,
     opticalIsomers = 1,
     molecularWeight = (64.034,'amu'),
     collisionModel = TransportData(shapeIndex=2, epsilon=(4418.31,'J/mol'), sigma=(4.687e-10,'m'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0, comment="""Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!"""),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.05587,0.0230321,-2.84046e-05,2.466e-08,-9.72695e-12,-4732.03,11.4096], Tmin=(100,'K'), Tmax=(661.458,'K')), NASAPolynomial(coeffs=[4.21186,0.0150074,-7.8618e-06,1.59181e-09,-1.14935e-13,-4862.33,6.48141], Tmin=(661.458,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-39.6093,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(128.874,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(CsCFFH) + group(CsJ2_singlet-CsH)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.05584,0.0230325,-2.84066e-05,2.46636e-08,-9.72913e-12,-4732.02,11.4097], Tmin=(100,'K'), Tmax=(661.375,'K')), NASAPolynomial(coeffs=[4.21188,0.0150074,-7.86177e-06,1.5918e-09,-1.14934e-13,-4862.34,6.48129], Tmin=(661.375,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-39.6093,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(128.874,'J/(mol*K)'), comment="""Thermo group additivity estimation: group(CsCFFH) + group(CsJ2_singlet-CsH)"""),
 )
 
 species(

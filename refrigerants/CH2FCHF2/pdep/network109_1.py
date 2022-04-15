@@ -19,7 +19,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.35812,0.0392947,-4.19267e-05,2.43185e-08,-5.88015e-12,-9491.9,18.0254], Tmin=(100,'K'), Tmax=(980.032,'K')), NASAPolynomial(coeffs=[7.66394,0.0176388,-8.78068e-06,1.77069e-09,-1.28302e-13,-10531.9,-7.46499], Tmin=(980.032,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-79.3897,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(O2sj(Cs-F1sCdH)) + radical(Cdj(Cd-CsF1s)(H))"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.35812,0.0392947,-4.19267e-05,2.43185e-08,-5.88015e-12,-9491.9,18.0254], Tmin=(100,'K'), Tmax=(980.032,'K')), NASAPolynomial(coeffs=[7.66393,0.0176388,-8.78068e-06,1.77069e-09,-1.28302e-13,-10531.9,-7.46499], Tmin=(980.032,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-79.3897,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(O2sj(Cs-F1sCdH)) + radical(Cdj(Cd-CsF1s)(H))"""),
 )
 
 species(
@@ -75,7 +75,7 @@ species(
     molecularWeight = (15.9994,'amu'),
     collisionModel = TransportData(shapeIndex=0, epsilon=(665.16,'J/mol'), sigma=(2.75,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,4.63019e-14,-6.5121e-17,3.00122e-20,-4.26132e-24,29230.2,5.12616], Tmin=(100,'K'), Tmax=(3821.96,'K')), NASAPolynomial(coeffs=[2.5,2.03348e-10,-7.42469e-14,1.19914e-17,-7.22693e-22,29230.2,5.12617], Tmin=(3821.96,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(243.034,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""O(T)""", comment="""Thermo library: primaryThermoLibrary"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,-1.84483e-15,2.71425e-18,-1.30028e-21,1.91033e-25,29230.2,5.12616], Tmin=(100,'K'), Tmax=(3598.68,'K')), NASAPolynomial(coeffs=[2.5,-2.82485e-12,1.07037e-15,-1.78888e-19,1.11248e-23,29230.2,5.12616], Tmin=(3598.68,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(243.034,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""O(T)""", comment="""Thermo library: primaryThermoLibrary"""),
 )
 
 species(
@@ -91,14 +91,14 @@ species(
 """),
     E0 = (-0.651196,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([323,467,575,827,1418,194,682,905,1196,1383,3221,439.435,439.564,439.597],'cm^-1')),
-        HinderedRotor(inertia=(0.377592,'amu*angstrom^2'), symmetry=1, barrier=(51.7341,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([323,467,575,827,1418,194,682,905,1196,1383,3221,437.953,438.154,441.539],'cm^-1')),
+        HinderedRotor(inertia=(0.376045,'amu*angstrom^2'), symmetry=1, barrier=(51.7539,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (76.0447,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.59677,0.0297955,-1.83591e-05,5.50976e-09,-6.73981e-13,-27.3053,15.0855], Tmin=(100,'K'), Tmax=(1812.93,'K')), NASAPolynomial(coeffs=[9.00424,0.0156583,-6.66213e-06,1.20844e-09,-8.08368e-14,-2350.57,-19.6389], Tmin=(1812.93,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-0.651196,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(203.705,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.59677,0.0297955,-1.83591e-05,5.50973e-09,-6.73974e-13,-27.3054,15.0855], Tmin=(100,'K'), Tmax=(1812.98,'K')), NASAPolynomial(coeffs=[9.00433,0.0156581,-6.66206e-06,1.20843e-09,-8.08355e-14,-2350.61,-19.6394], Tmin=(1812.98,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-0.651196,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(203.705,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
 )
 
 species(
@@ -191,7 +191,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (44.0277,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.55592,0.00767983,-5.29841e-07,-4.54684e-09,2.16672e-12,42166.8,9.46361], Tmin=(100,'K'), Tmax=(1043.41,'K')), NASAPolynomial(coeffs=[5.86815,0.00351561,-1.29999e-06,2.62257e-10,-1.9892e-14,41428.4,-3.01582], Tmin=(1043.41,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(350.447,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(133.032,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Cds_P) + radical(CdCdF1s)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.55591,0.0076799,-5.30098e-07,-4.54651e-09,2.16658e-12,42166.8,9.46363], Tmin=(100,'K'), Tmax=(1043.42,'K')), NASAPolynomial(coeffs=[5.86818,0.00351556,-1.29996e-06,2.62251e-10,-1.98915e-14,41428.4,-3.016], Tmin=(1043.42,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(350.447,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(133.032,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Cds_P) + radical(CdCdF1s)"""),
 )
 
 species(
@@ -205,7 +205,7 @@ species(
     molecularWeight = (1.00797,'amu'),
     collisionModel = TransportData(shapeIndex=0, epsilon=(1205.6,'J/mol'), sigma=(2.05,'angstroms'), dipoleMoment=(0,'C*m'), polarizability=(0,'angstroms^3'), rotrelaxcollnum=0.0, comment="""GRI-Mech"""),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,4.63019e-14,-6.5121e-17,3.00122e-20,-4.26132e-24,25474.2,-0.444973], Tmin=(100,'K'), Tmax=(3821.96,'K')), NASAPolynomial(coeffs=[2.5,2.03348e-10,-7.42469e-14,1.19914e-17,-7.22693e-22,25474.2,-0.444972], Tmin=(3821.96,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(211.805,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""H""", comment="""Thermo library: primaryThermoLibrary"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.5,-1.84483e-15,2.71425e-18,-1.30028e-21,1.91033e-25,25474.2,-0.444973], Tmin=(100,'K'), Tmax=(3598.68,'K')), NASAPolynomial(coeffs=[2.5,-2.82485e-12,1.07037e-15,-1.78888e-19,1.11248e-23,25474.2,-0.444973], Tmin=(3598.68,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(211.805,'kJ/mol'), Cp0=(20.7862,'J/(mol*K)'), CpInf=(20.7862,'J/(mol*K)'), label="""H""", comment="""Thermo library: primaryThermoLibrary"""),
 )
 
 species(
@@ -270,7 +270,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (48.0164,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.53591,0.00799828,-5.22385e-07,-4.56598e-09,2.08746e-12,-2348.33,9.31393], Tmin=(100,'K'), Tmax=(1079.18,'K')), NASAPolynomial(coeffs=[5.97189,0.00388217,-1.62977e-06,3.36434e-10,-2.54185e-14,-3160.19,-3.94933], Tmin=(1079.18,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-19.6796,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(128.874,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CsOJ) + radical(CsF1sHO2s)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[3.53592,0.00799825,-5.22271e-07,-4.56612e-09,2.08752e-12,-2348.33,9.31392], Tmin=(100,'K'), Tmax=(1079.18,'K')), NASAPolynomial(coeffs=[5.97187,0.0038822,-1.62979e-06,3.36437e-10,-2.54188e-14,-3160.18,-3.94923], Tmin=(1079.18,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-19.6796,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(128.874,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CsOJ) + radical(CsF1sHO2s)"""),
 )
 
 species(
@@ -303,14 +303,14 @@ species(
 """),
     E0 = (411.702,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([1685,370,3120,650,792.5,1650,467.472,467.494,467.504,467.628,2723.47],'cm^-1')),
-        HinderedRotor(inertia=(0.000771117,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([1685,370,3120,650,792.5,1650,465.979,466.487,467.92,467.975,2723.47],'cm^-1')),
+        HinderedRotor(inertia=(0.000765412,'amu*angstrom^2'), symmetry=1, barrier=(0.119627,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (54.0473,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.85069,0.0246304,-2.33385e-05,1.08715e-08,-2.00493e-12,49558.2,12.1033], Tmin=(100,'K'), Tmax=(1300.15,'K')), NASAPolynomial(coeffs=[8.43023,0.0074645,-3.53379e-06,7.16298e-10,-5.22257e-14,48107.3,-16.2793], Tmin=(1300.15,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(411.702,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(178.761,'J/(mol*K)'), comment="""Thermo library: DFT_QCI_thermo + radical(C=CJC=O) + radical(Cds_P)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.85069,0.0246305,-2.33385e-05,1.08715e-08,-2.00494e-12,49558.2,12.1033], Tmin=(100,'K'), Tmax=(1300.14,'K')), NASAPolynomial(coeffs=[8.43022,0.00746452,-3.5338e-06,7.163e-10,-5.22259e-14,48107.3,-16.2792], Tmin=(1300.14,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(411.702,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(178.761,'J/(mol*K)'), comment="""Thermo library: DFT_QCI_thermo + radical(C=CJC=O) + radical(Cds_P)"""),
 )
 
 species(
@@ -350,7 +350,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (72.0377,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.82568,0.0304558,-5.1173e-05,5.03437e-08,-1.89701e-11,15363.5,15.4414], Tmin=(100,'K'), Tmax=(840.486,'K')), NASAPolynomial(coeffs=[3.55108,0.0166675,-8.11849e-06,1.56148e-09,-1.07785e-13,15606.6,14.2397], Tmin=(840.486,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(127.425,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(178.761,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(C=COJ) + radical(C=C=CJ)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.82567,0.030456,-5.11735e-05,5.03445e-08,-1.89704e-11,15363.5,15.4415], Tmin=(100,'K'), Tmax=(840.482,'K')), NASAPolynomial(coeffs=[3.5511,0.0166674,-8.11847e-06,1.56147e-09,-1.07785e-13,15606.6,14.2396], Tmin=(840.482,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(127.425,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(178.761,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(C=COJ) + radical(C=C=CJ)"""),
 )
 
 species(
@@ -370,7 +370,7 @@ species(
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.08894,0.0475951,-5.06521e-05,2.13418e-08,3.32402e-12,-21758,17.6812], Tmin=(100,'K'), Tmax=(563.378,'K')), NASAPolynomial(coeffs=[6.54672,0.0244808,-1.18372e-05,2.30451e-09,-1.62415e-13,-22395.7,-2.46931], Tmin=(563.378,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-181.434,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.08887,0.0475963,-5.06584e-05,2.13546e-08,3.31519e-12,-21758,17.6815], Tmin=(100,'K'), Tmax=(563.397,'K')), NASAPolynomial(coeffs=[6.54675,0.0244807,-1.18371e-05,2.3045e-09,-1.62414e-13,-22395.7,-2.46948], Tmin=(563.397,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-181.434,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
 )
 
 species(
@@ -388,14 +388,14 @@ species(
     E0 = (-289.749,'kJ/mol'),
     modes = [
         HarmonicOscillator(frequencies=([234,347,1316,1464,3000,3100,440,815,1455,1000,611,648,830,1210,1753,180],'cm^-1')),
-        HinderedRotor(inertia=(0.298808,'amu*angstrom^2'), symmetry=1, barrier=(6.87018,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.932944,'amu*angstrom^2'), symmetry=1, barrier=(21.4502,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.298808,'amu*angstrom^2'), symmetry=1, barrier=(6.87019,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.932942,'amu*angstrom^2'), symmetry=1, barrier=(21.4502,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.88097,0.0509904,-8.08828e-05,6.99301e-08,-2.40273e-11,-34776.7,20.1863], Tmin=(100,'K'), Tmax=(793.098,'K')), NASAPolynomial(coeffs=[7.52786,0.0177046,-8.83948e-06,1.73132e-09,-1.21344e-13,-35521.2,-4.7948], Tmin=(793.098,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-289.749,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CsCOCsF1s) + radical(Csj(Cs-F1sCOH)(H)(H))"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.88099,0.0509902,-8.08817e-05,6.99284e-08,-2.40264e-11,-34776.7,20.1863], Tmin=(100,'K'), Tmax=(793.115,'K')), NASAPolynomial(coeffs=[7.52783,0.0177046,-8.83952e-06,1.73133e-09,-1.21345e-13,-35521.2,-4.79463], Tmin=(793.115,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-289.749,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(CsCOCsF1s) + radical(Csj(Cs-F1sCOH)(H)(H))"""),
 )
 
 species(
@@ -412,15 +412,15 @@ species(
 """),
     E0 = (121.107,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([231,791,3010,987.5,1337.5,450,1655,323,467,575,827,1418,388.052,388.369,388.683,388.873],'cm^-1')),
-        HinderedRotor(inertia=(0.475611,'amu*angstrom^2'), symmetry=1, barrier=(51.0917,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(0.476449,'amu*angstrom^2'), symmetry=1, barrier=(51.0871,'kJ/mol'), semiclassical=False),
+        HarmonicOscillator(frequencies=([231,791,3010,987.5,1337.5,450,1655,323,467,575,827,1418,388.628,388.634,388.636,388.637],'cm^-1')),
+        HinderedRotor(inertia=(0.476621,'amu*angstrom^2'), symmetry=1, barrier=(51.0843,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.476631,'amu*angstrom^2'), symmetry=1, barrier=(51.0843,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.24332,0.0420688,-3.53595e-05,1.6054e-08,-3.15252e-12,14626.2,13.8692], Tmin=(100,'K'), Tmax=(1151.58,'K')), NASAPolynomial(coeffs=[7.50087,0.0238067,-1.1572e-05,2.28304e-09,-1.6293e-13,13415.3,-12.2375], Tmin=(1151.58,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(121.107,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.24331,0.0420688,-3.53596e-05,1.60541e-08,-3.15254e-12,14626.2,13.8692], Tmin=(100,'K'), Tmax=(1151.58,'K')), NASAPolynomial(coeffs=[7.50085,0.0238067,-1.1572e-05,2.28304e-09,-1.62931e-13,13415.3,-12.2374], Tmin=(1151.58,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(121.107,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(AllylJ2_triplet)"""),
 )
 
 species(
@@ -437,14 +437,14 @@ species(
 """),
     E0 = (-255.526,'kJ/mol'),
     modes = [
-        HarmonicOscillator(frequencies=([271,519,563,612,1379,234,589,736,816,1240,3237,3010,987.5,1337.5,450,1655,534.248],'cm^-1')),
+        HarmonicOscillator(frequencies=([271,519,563,612,1379,234,589,736,816,1240,3237,3010,987.5,1337.5,450,1655,534.249],'cm^-1')),
         HinderedRotor(inertia=(0.23444,'amu*angstrom^2'), symmetry=1, barrier=(47.4817,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.28044,0.0363294,-2.79392e-05,9.98026e-09,-1.41201e-12,-30669.9,17.4481], Tmin=(100,'K'), Tmax=(1642.17,'K')), NASAPolynomial(coeffs=[11.8659,0.0129808,-6.61181e-06,1.32195e-09,-9.38734e-14,-33818.1,-33.5509], Tmin=(1642.17,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-255.526,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(C=COJ) + radical(Csj(Cd-CdF1s)(F1s)(H))"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.28044,0.0363294,-2.79392e-05,9.98023e-09,-1.412e-12,-30669.9,17.4481], Tmin=(100,'K'), Tmax=(1642.19,'K')), NASAPolynomial(coeffs=[11.866,0.0129807,-6.61177e-06,1.32194e-09,-9.38727e-14,-33818.1,-33.5511], Tmin=(1642.19,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-255.526,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(C=COJ) + radical(Csj(Cd-CdF1s)(F1s)(H))"""),
 )
 
 species(
@@ -462,14 +462,14 @@ species(
     E0 = (243.021,'kJ/mol'),
     modes = [
         HarmonicOscillator(frequencies=([557,1111,162,485,641,721,926,1292,1380,3063,1685,370,3120,650,792.5,1650],'cm^-1')),
-        HinderedRotor(inertia=(1.07479,'amu*angstrom^2'), symmetry=1, barrier=(24.7115,'kJ/mol'), semiclassical=False),
-        HinderedRotor(inertia=(1.0772,'amu*angstrom^2'), symmetry=1, barrier=(24.767,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(1.0758,'amu*angstrom^2'), symmetry=1, barrier=(24.7347,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(1.07611,'amu*angstrom^2'), symmetry=1, barrier=(24.7418,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.57509,0.0582214,-9.54396e-05,8.21429e-08,-2.79729e-11,29311.3,19.4437], Tmin=(100,'K'), Tmax=(777.38,'K')), NASAPolynomial(coeffs=[8.8107,0.0172169,-9.03735e-06,1.80132e-09,-1.27333e-13,28300.4,-12.9084], Tmin=(777.38,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(243.021,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Cdj(Cs-F1sO2sH)(Cd-HH)) + radical(Cds_P)"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[1.57513,0.0582208,-9.54373e-05,8.21393e-08,-2.79709e-11,29311.3,19.4436], Tmin=(100,'K'), Tmax=(777.424,'K')), NASAPolynomial(coeffs=[8.81064,0.017217,-9.03741e-06,1.80134e-09,-1.27334e-13,28300.4,-12.9081], Tmin=(777.424,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(243.021,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(Cdj(Cs-F1sO2sH)(Cd-HH)) + radical(Cds_P)"""),
 )
 
 species(
@@ -487,13 +487,13 @@ species(
     E0 = (-72.8651,'kJ/mol'),
     modes = [
         HarmonicOscillator(frequencies=([361,769,965,1078,1132,1246,3247,615,860,1140,1343,3152,1685,370,180,180,180],'cm^-1')),
-        HinderedRotor(inertia=(0.19159,'amu*angstrom^2'), symmetry=1, barrier=(10.1537,'kJ/mol'), semiclassical=False),
+        HinderedRotor(inertia=(0.191592,'amu*angstrom^2'), symmetry=1, barrier=(10.1537,'kJ/mol'), semiclassical=False),
     ],
     spinMultiplicity = 3,
     opticalIsomers = 1,
     molecularWeight = (92.0441,'amu'),
     energyTransferModel = SingleExponentialDown(alpha0=(3.5886,'kJ/mol'), T0=(300,'K'), n=0.85),
-    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.12158,0.0451635,-5.92048e-05,4.28959e-08,-1.27541e-11,-8699.43,18.4665], Tmin=(100,'K'), Tmax=(813.366,'K')), NASAPolynomial(coeffs=[7.64539,0.0179977,-9.10454e-06,1.83072e-09,-1.31834e-13,-9597.98,-7.04153], Tmin=(813.366,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-72.8651,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(O2sj(Cs-F1sCdH)) + radical(Cdj(Cs-F1sO2sH)(Cd-F1sH))"""),
+    thermo = NASA(polynomials=[NASAPolynomial(coeffs=[2.12156,0.0451637,-5.92053e-05,4.28965e-08,-1.27544e-11,-8699.43,18.4665], Tmin=(100,'K'), Tmax=(813.315,'K')), NASAPolynomial(coeffs=[7.64537,0.0179977,-9.10457e-06,1.83073e-09,-1.31834e-13,-9597.97,-7.04142], Tmin=(813.315,'K'), Tmax=(5000,'K'))], Tmin=(100,'K'), Tmax=(5000,'K'), E0=(-72.8651,'kJ/mol'), Cp0=(33.2579,'J/(mol*K)'), CpInf=(224.491,'J/(mol*K)'), comment="""Thermo library: CHOF_G4 + radical(O2sj(Cs-F1sCdH)) + radical(Cdj(Cs-F1sO2sH)(Cd-F1sH))"""),
 )
 
 species(

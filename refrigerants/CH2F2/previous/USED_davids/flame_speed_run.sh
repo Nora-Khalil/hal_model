@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SBATCH --nodes=1
-#SBATCH --time=9:00:00
+#SBATCH --time=12-00:00:00
 #SBATCH --job-name=fc_U{CH2F2}
 #SBATCH --error=fc.slurm.log
 #SBATCH --output=fc_output.slurm.log
@@ -9,7 +9,7 @@
 ##SBATCH --mem-per-cpu=8Gb
 ##SBATCH --ntasks=1 
 ##SBATCH --array=1
-#SBATCH --partition=short
+#SBATCH --partition=west
 
 
 source activate cantera_env

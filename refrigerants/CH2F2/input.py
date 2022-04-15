@@ -29,8 +29,8 @@ thermolibs_Creg = [
 
 database(
 thermoLibraries = thermolibs,
-reactionLibraries = ['halogens_pdep'],
-seedMechanisms = ['FFCM1(-)'],
+reactionLibraries = ['FFCM1(-)','halogens_pdep'],
+seedMechanisms = [],
 kineticsDepositories = ['training'],
 kineticsFamilies = ['default','halogens','Disproportionation-Y'],
 frequenciesLibraries = ['halogens_G4'],
@@ -67,10 +67,16 @@ species(
     reactive = True,
     structure = SMILES('C')
 )
-    
+ 
+species(
+    label = 'OH',
+    reactive = True,
+    structure = SMILES('[OH]')
+)
+   
 simpleReactor(
         temperature=[(1000,'K'),(2000,'K')],
-        pressure= (1.0,'bar'),
+        pressure=[(1.0,'bar'),(10.0,'bar')],
         nSims=12,
         initialMoleFractions={
         "CH2F2": [0.5,1.0],
@@ -83,8 +89,8 @@ simpleReactor(
         #terminationRateRatio=1e-4,
         #terminationTime=(10,'s'),
         terminationTime=(1,'s'),
-        #sensitivity=['CH2F2','OH'],
-        #sensitivityThreshold=0.001,
+        sensitivity=['CH2F2','OH'],
+        sensitivityThreshold=0.001,
         )
         
 model(

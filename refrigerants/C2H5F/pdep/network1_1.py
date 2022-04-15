@@ -209,7 +209,7 @@ species(
 )
 
 species(
-    label = 'H(5)',
+    label = 'H(6)',
     structure = adjacencyList("""multiplicity 2
 1 H u1 p0 c0
 """),
@@ -388,7 +388,7 @@ family: R_Recombination"""),
 
 reaction(
     label = 'reaction6',
-    reactants = ['H(5)', 'CH2F-CH2(61)'],
+    reactants = ['H(6)', 'CH2F-CH2(61)'],
     products = ['C2H5F(1)'],
     transitionState = 'TS6',
     kinetics = Arrhenius(A=(1.19e+35,'cm^3/(mol*s)'), n=-8.51, Ea=(8140,'cal/mol'), T0=(1,'K'), comment="""Matched reaction 178 C2H4F + H <=> C2H5F in R_Recombination/training
@@ -398,7 +398,7 @@ family: R_Recombination"""),
 
 reaction(
     label = 'reaction7',
-    reactants = ['H(5)', 'CH3-CHF(62)'],
+    reactants = ['H(6)', 'CH3-CHF(62)'],
     products = ['C2H5F(1)'],
     transitionState = 'TS7',
     kinetics = Arrhenius(A=(9.57e+38,'cm^3/(mol*s)'), n=-9.24, Ea=(7360,'cal/mol'), T0=(1,'K'), comment="""Matched reaction 179 C2H4F-2 + H <=> C2H5F in R_Recombination/training
