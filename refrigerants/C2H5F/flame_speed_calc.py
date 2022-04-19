@@ -4,7 +4,7 @@ import cantera as ct
 import numpy as np
 import pandas as pd
 
-print("Running Cantera Version: " + str(ct.__version__)
+print("Running Cantera Version: " + str(ct.__version__))
 
 To = 298
 Po = 1e5 # ct.one_atm
@@ -27,7 +27,7 @@ results = {}
 
 for x in mole_frac_list: 
     norm_ox = (1-x)*.21
-    mole_frac_dict = {'C2H4F2(1)': (x/norm_ox), 'O2(2)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
+    mole_frac_dict = {'C2H5F(1)': (x/norm_ox), 'O2(2)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
     gas.TPX = To, Po, mole_frac_dict
     width = 0.08
     flame = ct.FreeFlame(gas, width=width)
@@ -51,6 +51,5 @@ print(vol_fracs)
 print("flame speeds are:")
 print(flame_speeds)
 
-print(xresults)
 print("volume fractions list is " + str(mole_frac_list))
 

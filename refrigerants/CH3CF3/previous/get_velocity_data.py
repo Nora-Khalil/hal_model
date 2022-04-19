@@ -5,9 +5,6 @@ directory = './data'
 
 file_names = os.listdir(directory)
 
-#file_names = ['.test_0.07250000000000001.csv.swp']
-#file_names = ['test_0.07.csv']
-
 file_name_dict_unsorted = {}
 
 for name in file_names:
@@ -28,21 +25,14 @@ print(volume_fractions_float)
 #makes list of velocities 
 
 flamespeeds = []
+
 filenames_sorted_dict = {k:v for k,v in sorted(file_name_dict_unsorted.items(), key=lambda item: item[1])}
 for file in filenames_sorted_dict.keys():
     d = os.path.join(directory,file)
     with open(d,'r') as csvfile:
-        secondword = [] #will only use the second velocity in this list 
-        for line in csvfile: 
-            secondword.append(line.split(',',3)[2])
-        flamespeeds.append(secondword[1])
-
-
-#take list of flame speeds (list of strings) and change to a list of floats
-flamespeeds_float = []
-for string in flamespeeds:
-    flamespeeds_float.append(float(string))
-  
+        #for characters in csvfile.readlines()[1]:
+        match = re.match('0,0\.0,([0-9.]+),298\.0',csvfile.readlines()[1])
+        flamespeeds.append(float(match.group(1)))
 print('Flame speeds are') 
-
-print(flamespeeds_float)  
+print(flamespeeds)
+        

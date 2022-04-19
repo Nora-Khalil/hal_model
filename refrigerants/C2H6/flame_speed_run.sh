@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SBATCH --nodes=1
-#SBATCH --time=unlimited
+#SBATCH --time=12-00:00:00
 #SBATCH --job-name=fc_{C2H6}
 #SBATCH --error=fc.slurm.log
 #SBATCH --output=fc_output.slurm.log
