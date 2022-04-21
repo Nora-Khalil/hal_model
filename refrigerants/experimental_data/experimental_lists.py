@@ -6,10 +6,9 @@ d= os.path.join(directory,'experimental_data.csv')
 
 with open(d,'r') as csvfile: 
     lines = csvfile.readlines()
-    print(lines[2])
-    for i in range(1,96):
-        match = re.match('R-[a-zA-Z0-9]+,[^,]+,([\w]+)[\s+]?,+[0-9.]+,[0-9.]+,([0-9.]+),([0-9.]+),',lines[i])
-        #match = re.match('R-[a-zA-Z0-9]+,[A-Z()=]+,([\w]+),[0-9.]+,[0-9.]+,([0-9.]+),([0-9.]+),',lines[i])
+    for line in lines[1:]:
+        match = re.match('R-[a-zA-Z0-9]+,[^,]+,([\w]+)[\s+]?,+[0-9.]+,[0-9.]+,([0-9.]+),([0-9.]+),',line)
+        #match = re.match('R-[a-zA-Z0-9]+,[A-Z()=]+,([\w]+),[0-9.]+,[0-9.]+,([0-9.]+),([0-9.]+),',line)
         if match: 
             group, vol_frac, flamespeed = (match.group(1)), float(match.group(2)), float(match.group(3))
             print(group, vol_frac, flamespeed)
