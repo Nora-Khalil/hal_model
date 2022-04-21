@@ -1,4 +1,4 @@
-gerant,smiles,formula,stoich,phi,volume_frac,Su (cm/s),O2,Ti,Pi,method,source,source_long
+refrigerant,smiles,formula,stoich,phi,volume_frac,Su (cm/s),O2,Ti,Pi,method,source,source_long
 R-32,FCF,CH2F2,0.1736,0.9,0.15624,5.97,air,298,1,CVM,10,"Takizawa K, Takahashi A, Tokuhashi K, Kondo S, Sekiya A (2005) Burning velocity measurement of fluorinated compounds by the spherical-vessel method. Combust Flame 141(3):298-307. https://doi.org/DOI 10.1016/j.combustflame.2005.01.009"
 R-32,FCF,CH2F2,0.1736,0.95,0.16492,6.38,air,298,1,CVM,10,"Takizawa K, Takahashi A, Tokuhashi K, Kondo S, Sekiya A (2005) Burning velocity measurement of fluorinated compounds by the spherical-vessel method. Combust Flame 141(3):298-307. https://doi.org/DOI 10.1016/j.combustflame.2005.01.010"
 R-32,FCF,CH2F2,0.1736,1,0.1736,6.56,air,298,1,CVM,10,"Takizawa K, Takahashi A, Tokuhashi K, Kondo S, Sekiya A (2005) Burning velocity measurement of fluorinated compounds by the spherical-vessel method. Combust Flame 141(3):298-307. https://doi.org/DOI 10.1016/j.combustflame.2005.01.011"
