@@ -56,14 +56,14 @@ for x in mole_frac_list:
     flame.set_refine_criteria(ratio=3, slope=0.1, curve=0.1) 
     flame.max_time_step_count = 900
     loglevel = 1 
-    flame.transport_model='Mix'
+    flame.transport_model='Multi'
     flame.solve(loglevel=loglevel, auto=True)
     Su = flame.velocity[0]
     results[x] = Su
     sltn = flame.to_solution_array()
     
     #save to csv file
-    directory = './data_tp'
+    directory = './data_tp_multi'
     with open(os.path.join(directory,f'{x}.csv'),'w') as f:
        f.write(str(Su))
        f.write(str(results.keys()))
@@ -106,9 +106,9 @@ def make_bash_script(label):
 
 #SBATCH --nodes=1
 #SBATCH --time=12-00:00:00
-#SBATCH --job-name={label}_mix
-#SBATCH --error=tp_mix.slurm.log
-#SBATCH --output=tp_mix.slurm.log
+#SBATCH --job-name=mu{label}
+#SBATCH --error=tp_multi.slurm.log
+#SBATCH --output=tp_multi.slurm.log
 ##SBATCH --cpus-per-task=5
 ##SBATCH --mem-per-cpu=8Gb
 ##SBATCH --ntasks=1 
@@ -117,8 +117,8 @@ def make_bash_script(label):
 
 
 source activate proj_transport
-PYTHONPATH=/home/khalil.nor/cantera/build/python python tp_mix_flame_speed_calc.py
-##python tp_mix_flame_speed_calc.py
+PYTHONPATH=/home/khalil.nor/cantera/build/python python tp_multi_flame_speed_calc.py
+##python tp_multi_flame_speed_calc.py
 """.replace('label',label)
 
     return bash_script
@@ -126,7 +126,7 @@ PYTHONPATH=/home/khalil.nor/cantera/build/python python tp_mix_flame_speed_calc.
 if __name__ == "__main__":
 
     for label,values in species.items():  
-       d = os.path.join(directory,label,'tp_mix_flame_speed_calc.py')
+       d = os.path.join(directory,label,'tp_multi_flame_speed_calc.py')
        if os.path.exists(d):
           continue
        flame_speed_calc = flame_speed_calc_file
@@ -134,17 +134,12 @@ if __name__ == "__main__":
        flame_speed_calc +=make_for_loop(label)
        bash_script = make_bash_script(label)
        d = os.path.join(directory,label)
-       with open(os.path.join(d,'tp_mix_flame_speed_calc.py'),'w') as f: 
+       with open(os.path.join(d,'tp_multi_flame_speed_calc.py'),'w') as f: 
          for l in flame_speed_calc: 
             f.write(l)
-       with open(os.path.join(d,'run_tp_mix_flame_speed_calc.sh'),'w') as f: 
+       with open(os.path.join(d,'run_tp_multi_flame_speed_calc.sh'),'w') as f: 
          for l in bash_script: 
             f.write(l)
-       data_tp = f'../{label}/data_tp'
+       data_tp = f'../{label}/data_tp_multi'
        os.makedirs(data_tp,exist_ok=True)
-       """ par_dir= os.path.join(directory,label)
-       if os.path.exists(par_dir): 
-          continue 
-       end_dir = 'data_tp'
-       data = os.path.join(par_dir,end_dir,'')
-       os.makedirs(data)   """
+     
