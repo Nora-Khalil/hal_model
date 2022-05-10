@@ -1,0 +1,11 @@
+binary_diff_coeffsNoneelectrical_conductivityCantera error for electrical_conductivity attribute: 
+*******************************************************************************
+NotImplementedError thrown by Transport::electricalConductivity:
+Not implemented for transport model 'Mix'.
+*******************************************************************************
+get_binary_diff_coeffs_polynomial(1,2)Noneget_collision_integral_polynomials(1,2)Noneget_thermal_conductivity_polynomial(1)Noneget_viscosity_polynomial(1)Nonemix_diff_coeffsNonemix_diff_coeffs_massNonemix_diff_coeffs_moleNonemobilitiesNonemulti_diff_coeffsCantera error for multi_diff_coeffs attribute: 
+*******************************************************************************
+NotImplementedError thrown by Transport::getMultiDiffCoeffs:
+Not implemented for transport model 'Mix'.
+*******************************************************************************
+species_viscositiesNonethermal_conductivityNonethermal_diff_coeffsNone

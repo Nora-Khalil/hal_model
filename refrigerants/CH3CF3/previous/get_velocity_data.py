@@ -28,9 +28,8 @@ flamespeeds = []
 
 filenames_sorted_dict = {k:v for k,v in sorted(file_name_dict_unsorted.items(), key=lambda item: item[1])}
 for file in filenames_sorted_dict.keys():
-    d = os.path.join(directory,file)
+    d = os.path.join(directory,file)    
     with open(d,'r') as csvfile:
-        #for characters in csvfile.readlines()[1]:
         match = re.match('0,0\.0,([0-9.]+),298\.0',csvfile.readlines()[1])
         flamespeeds.append(float(match.group(1)))
 print('Flame speeds are') 

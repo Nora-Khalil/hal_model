@@ -1,0 +1,28 @@
+import cantera as ct 
+import os
+
+#create gas object
+gas = ct.Solution('./cantera/chem.cti')
+
+#Test for different transport properties
+properties = ['binary_diff_coeffs', 'electrical_conductivity', 'get_binary_diff_coeffs_polynomial(1,2)', 'get_collision_integral_polynomials(1,2)', 'get_thermal_conductivity_polynomial(1)', 'get_viscosity_polynomial(1)', 'mix_diff_coeffs', 'mix_diff_coeffs_mass', 'mix_diff_coeffs_mole', 'mobilities', 'multi_diff_coeffs', 'species_viscosities', 'thermal_conductivity', 'thermal_diff_coeffs']
+
+for prop in properties: 
+   try: 
+       print(prop)
+       eval(f'print(gas.{prop})')
+       print()
+   except AttributeError: 
+      print(f'gas object has no {prop} attribute')
+      print()
+   except NotImplementedError: 
+      print(f'gas object has no {prop} attribute')
+      print()
+   except ct.CanteraError as err:
+      print(f'Cantera error for {prop} attribute: {err}')
+      print()
+
+
+
+
+
