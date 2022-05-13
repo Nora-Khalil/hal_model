@@ -110,3 +110,10 @@ S(12684)            2     352.621     5.073     0.000     0.000     0.000    ! E
 S(723)              2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
 S(8053)             2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
 S(7236)             2     346.996     4.857     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=450.64 K, Pc=57.13 bar (from Joback method)
+S(2121)             2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+C3H5(1893)          2     260.001     4.850     0.000     0.000     1.000    ! GRI-Mech
+S(9934)             2     328.867     4.781     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=427.10 K, Pc=56.79 bar (from Joback method)
+S(1894)             2     331.429     4.805     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=430.43 K, Pc=56.36 bar (from Joback method)
+S(15483)            2     346.266     5.076     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=449.70 K, Pc=49.94 bar (from Joback method)
+S(1895)             2     328.867     4.781     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=427.10 K, Pc=56.79 bar (from Joback method)
+S(7181)             2     339.435     4.855     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=440.82 K, Pc=55.94 bar (from Joback method)

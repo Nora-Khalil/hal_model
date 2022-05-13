@@ -154,3 +154,7 @@ S(4816)             2     531.400     4.687     0.000     0.000     0.000    ! E
 S(10392)            2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
 S(1955)             2     329.787     4.732     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=428.29 K, Pc=58.72 bar (from Joback method)
 S(26536)            2     531.400     4.687     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+S(10389)            2     346.266     5.076     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=449.70 K, Pc=49.94 bar (from Joback method)
+S(21380)            2     422.368     5.734     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=548.53 K, Pc=42.28 bar (from Joback method)
+S(1821)             2     341.100     5.784     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+S(17498)            2     361.764     4.830     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=469.82 K, Pc=60.56 bar (from Joback method)

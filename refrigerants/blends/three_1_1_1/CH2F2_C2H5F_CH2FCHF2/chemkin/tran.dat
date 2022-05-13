@@ -124,3 +124,8 @@ S(5146)             2     422.495     5.931     0.000     0.000     0.000    ! E
 C3H3(7690)          2     252.000     4.760     0.000     0.000     1.000    ! GRI-Mech
 S(6419)             2     431.359     5.678     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=560.21 K, Pc=44.44 bar (from Joback method)
 S(15496)            2     414.680     6.066     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=538.55 K, Pc=35.05 bar (from Joback method)
+S(1327)             2     334.277     4.727     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=434.13 K, Pc=59.72 bar (from Joback method)
+CH3F(41)            2     262.000     4.123     1.800     0.000     0.000    ! NIST_Fluorine
+S(3235)             2     343.084     5.412     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=445.56 K, Pc=40.83 bar (from Joback method)
+S(9429)             2     399.300     5.949     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
+S(15672)            2     352.621     5.073     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=457.95 K, Pc=50.95 bar (from Joback method)
