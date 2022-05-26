@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #SBATCH --nodes=1
-#SBATCH --time=7-00:00:00
-#SBATCH --job-name=fc_C2H5F_CH3F
-#SBATCH --error=fc.slurm.log
-#SBATCH --output=fc_output.slurm.log
+#SBATCH --time=2-00:00:00
+#SBATCH --job-name=fcall_C2H5F_CH3F
+#SBATCH --error=fc.slurmall.log
+#SBATCH --output=fc_outputall.slurm.log
 ##SBATCH --cpus-per-task=5
 ##SBATCH --mem-per-cpu=8Gb
 ##SBATCH --ntasks=1 

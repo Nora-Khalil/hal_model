@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 #SBATCH --job-name=rmg_runs_1_42
 #SBATCH --output=rmg_all.slurm.%A_%a.log
 #SBATCH --error=error_rmg_all.slurm.%A_%a.log

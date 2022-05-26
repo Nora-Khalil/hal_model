@@ -9,17 +9,16 @@ print("Running Cantera Version: " + str(ct.__version__))
 To = 298
 Po = 1e5 # ct.one_atm
 
-#gas = ct.Solution('./cantera/chem.cti')
-gas = ct.Solution('./chemkin/chemcopy.cti')
+gas = ct.Solution('./chemkin/chem_final.cti')
 
 mole_frac_list = np.arange(0.025, 0.25, step=0.025)
 
 results = {}
 
 for x in mole_frac_list: 
-    try:
+    try: 
         norm_ox = (1-x)*.21
-        mole_frac_dict = {'C2H5F(1)': (x/norm_ox), 'CH3F(2)': (x/norm_ox), 'O2(3)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
+        mole_frac_dict = {'C2H3F3(1)': (x/norm_ox), 'CH3F(2)': (x/norm_ox), 'O2(3)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
         gas.TPX = To, Po, mole_frac_dict
         width = 0.08
         flame = ct.FreeFlame(gas, width=width)
