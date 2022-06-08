@@ -14,15 +14,19 @@ print("Running Cantera Version: " + str(ct.__version__))
 '''copies chemkin files to dups folder '''
 
 
-#os.chdir('/Users/nora/Code/projects/halogens/refrigerants/blends/C2H5F_CH2F2/chemkin') #put slurm_task id as C2H5F_CH2F2 when I want to generalize the file?
 directory ='.'
 
 #list all the input files in the chemkin folder
 list_of_inp_files = [file for file in os.listdir(os.path.join(directory,'chemkin')) if re.match('chem0([0-9]+)\.inp', file) ]
 
-os.system('source activate ct-env') #if on local, this is cantera 2.6 beta
-#os.system('source activate cantera_env') #if on discovery (will be cantera 2.5)
-os.system('cd chemkin')
+#os.system('source activate ct_env') #if on local, this is cantera 2.6 beta
+os.system('source activate cantera_env') #if on discovery (will be cantera 2.5)
+
+#os.system('cd chemkin')
+#os.getcwd()
+
+os.chdir('./chemkin')
+
 #copy folders so i dont screw up the originals, and change into the new directory with copies
 os.makedirs('dups', exist_ok=True)
 
@@ -32,7 +36,9 @@ for file in list_of_inp_files:
     
 dup_files = [file for file in os.listdir('./dups')]
 os.system('scp tran.dat ./dups/tran.dat')
-os.system('cd dups') 
+#os.system('cd dups') 
+
+os.chdir('./dups')
 
 
 
@@ -40,7 +46,7 @@ os.system('cd dups')
 
 '''converts all chemkin files to .cti files'''
 
-dup_files= ['dup_chem0156.inp'] #test with one file first 
+#dup_files= ['dup_chem0156.inp'] #test with one file first 
 
 for file in dup_files: 
     x = 0
@@ -67,7 +73,7 @@ for file in dup_files:
 
                 #start editing below
 
-                #'adjustments' will make sure that my, even when I add an element in 'data', my index will still be correct
+                #'adjustments' will make sure that, even when I add an element in 'data', my index will still be correct
                 adjustments = [0,1]
                 for i,adjust in zip(line_numbers,adjustments): 
                     start = i+adjust-1
@@ -119,19 +125,20 @@ else:
 
 #os.chdir('/Users/nora/Code/projects/halogens/refrigerants/blends/C2H5F_CH2F2') #put slurm_task id as C2H5F_CH2F2 when I want to generalize the file?
 
-cti_files = [file for file in os.listdir('./chemkin/dups') if re.match('dup_chem0([0-9]+)\.cti', file)]
+cti_files = [file for file in os.listdir('.') if re.match('dup_chem0([0-9]+)\.cti', file)]
 
 #cti_files = ['dup_chem0156.cti']
            
 To = 298
 Po = 1e5 # ct.one_atm
 #vol_frac_list = np.arange(0.025, 0.25, step=0.01)
-vol_frac_list =[.125]
+vol_frac_list =[.050]
 
 
 header = ['species']
 List_to_write_to_csv = []
 
+os.chdir('../../')
 
 for file in cti_files: 
     #make directory to store flame speed calculations, and a header for csv files
@@ -150,10 +157,7 @@ for file in cti_files:
            
             x = vol_frac_list[i]
             norm_ox = (1-x)*.21
-            vol_frac_dict = {'C2H5F(1)': (x/2/norm_ox), 
-                              'CH2F2(2)': (x/2/norm_ox), 
-                              'O2(3)':((1-x)*.21)/norm_ox, 
-                              'N2':((1-x)*0.79)/norm_ox } 
+            vol_frac_dict = {'CH2F2(1)': (x/3/norm_ox), 'C2H5F(2)': (x/3/norm_ox), 'C2H3F3(3)': (x/3/norm_ox), 'O2(4)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
             gas.TPX = To, Po, vol_frac_dict
             width = 0.08
             flame = ct.FreeFlame(gas, width=width)
@@ -183,7 +187,7 @@ for file in cti_files:
             first_column = df2.columns[0]
             # Delete first
             df2 = df2.drop([first_column], axis=1)
-            df2.to_csv(f'./flame_calcs_different_models/{file}_CALC/data_richards_py/test_{x}.csv', index=False)
+            df2.to_csv(f'./flame_calcs_different_models/{file}_CALC/test_{x}.csv', index=False)
         except Exception as e: 
             print(f'********************passed volume fraction:{vol_frac_list[i]}, error: {e}*************************************')
             pass
@@ -210,14 +214,3 @@ with open('final_calcs_alternative.csv', 'w+') as g:
     writers.writerow(header)
     for i in List_to_write_to_csv:
     	writers.writerow(i)
-    
-
-
-with open('final_calcs.csv', 'w+') as f:
-    writer = csv.writer(f)
-    writer.writerow(header)
-    writer.writerow(List_to_write_to_csv)
-
-
-
-
