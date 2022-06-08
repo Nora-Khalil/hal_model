@@ -18,7 +18,7 @@ results = {}
 for x in mole_frac_list: 
     try: 
         norm_ox = (1-x)*.21
-        mole_frac_dict = {'C2H3F3(1)': (x/norm_ox), 'CH3F(2)': (x/norm_ox), 'O2(3)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
+        mole_frac_dict = {'C2H3F3(1)': (x/2/norm_ox), 'CH3F(2)': (x/2/norm_ox), 'O2(3)':((1-x)*.21)/norm_ox, 'N2':((1-x)*0.79)/norm_ox } 
         gas.TPX = To, Po, mole_frac_dict
         width = 0.08
         flame = ct.FreeFlame(gas, width=width)
