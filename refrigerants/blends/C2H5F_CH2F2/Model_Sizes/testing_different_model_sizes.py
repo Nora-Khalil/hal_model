@@ -205,18 +205,13 @@ for file in cti_files:
     
     List_to_write_to_csv.append(values)
     
-with open('final_calcs_alternative.csv', 'w+') as g:
+with open('final_calcs.csv', 'w+') as g:
     writers = csv.writer(g)
     writers.writerow(header)
     for i in List_to_write_to_csv:
     	writers.writerow(i)
     
 
-
-with open('final_calcs.csv', 'w+') as f:
-    writer = csv.writer(f)
-    writer.writerow(header)
-    writer.writerow(List_to_write_to_csv)
 
 
 
