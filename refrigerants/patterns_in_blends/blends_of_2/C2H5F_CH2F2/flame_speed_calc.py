@@ -48,7 +48,7 @@ for i in  range(len(vol_frac_list)):
     #flame.flame.set_transient_tolerances(default=tol_ts)
     #flame.set_refine_criteria(ratio=5, slope=0.25, curve=0.27)
     flame.set_refine_criteria(ratio=3, slope=0.1, curve=0.1) 
-    flame.max_time_step_count = 900
+    flame.max_time_step_count = 1200
     loglevel = 1 
     try:
         if i!=0:
