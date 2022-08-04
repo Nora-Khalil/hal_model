@@ -9,11 +9,11 @@ print("Running Cantera Version: " + str(ct.__version__))
 To = 298
 Po = 1e5 # ct.one_atm
 
-gas = ct.Solution('./chemkin/dups/dup_chem0076.cti')
+gas = ct.Solution('/work/westgroup/nora/Code/projects/halogens/refrigerants/patterns_in_blends/blends_of_2/C2H5F_CH2F2/cantera/chem.cti')
 
 
 
-vol_frac_list = np.arange(0.025, 0.25, step=0.025)
+vol_frac_list = list(np.linspace(0.025, 0.25, 30))
 
 results = {}
 

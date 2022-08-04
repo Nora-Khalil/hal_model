@@ -2,9 +2,9 @@
 
 #SBATCH --nodes=1
 #SBATCH --time=1-00:00:00
-#SBATCH --job-name=FIXED_fcall_C2H5F_CH2F2
-#SBATCH --error=FIXED_fcall.slurm.log
-#SBATCH --output=FIXED_fc_outputall.slurm.log
+#SBATCH --job-name=test
+#SBATCH --error=testerror.slurm.log
+#SBATCH --output=testoutput.slurm.log
 ##SBATCH --cpus-per-task=5
 ##SBATCH --mem-per-cpu=8Gb
 ##SBATCH --ntasks=1 
