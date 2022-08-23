@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=flame_speeds_120-140
+#SBATCH --job-name=flame_speeds-1001_2000
 #SBATCH --partition=west,short
 #SBATCH --exclude=c5003
 #SBATCH --mem=20Gb

@@ -63,13 +63,13 @@ for i in  range(len(BTPmole_list)):
         loglevel = 1 
 
         ######################################################################################
-        if i!=0:
-             d = f'./data/range10pts_test_{BTPmole_list[i-1]}.csv'
-             if os.path.exists(d):  
-                 arr2 = ct.SolutionArray(gas)
-                 arr2.read_csv(d)
-                 flame.set_initial_guess(data=arr2)
-                 print(' initial guess has been set')
+        #if i!=0:
+         #    d = f'./data/range10pts_test_{BTPmole_list[i-1]}.csv'
+          #   if os.path.exists(d):  
+           #      arr2 = ct.SolutionArray(gas)
+             #    arr2.read_csv(d)
+            #     flame.set_initial_guess(data=arr2)
+              #   print(' initial guess has been set')
         #######################################################################################        
 
         #"False" stops the calculation from retrying over and over, thanks Chao 
@@ -98,7 +98,7 @@ print("flame speeds are:")
 print(flame_speeds)
 
 
-with open(f'flip_plots/par_flame_speeds_{match.group(1)}.csv', 'w+') as g:
+with open(f'./flip_data/par_flame_speeds_{match.group(1)}.csv', 'w+') as g:
     g.write(directory)
     g.write('\n')
     writers = csv.writer(g)
