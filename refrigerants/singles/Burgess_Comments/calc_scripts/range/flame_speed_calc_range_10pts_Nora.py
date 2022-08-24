@@ -13,7 +13,7 @@ print("Running Cantera Version: " + str(ct.__version__))
 
 To = 298
 Po = ct.one_atm
-directory = '/work/westgroup/nora/Code/projects/halogens/refrigerants/singles/Burgess_Comments/cantera/Nora/2_BTP/FFCM_seed/2_BTP_seed/chemkin/copies/copy_chem_120.cti'
+directory = '/work/westgroup/nora/Code/projects/halogens/refrigerants/singles/Burgess_Comments/cantera/Nora/2_BTP/FFCM_seed/2_BTP_seed/chemkin/copies/copy_chem0145.cti'
 gas = ct.Solution(directory)
 
 
@@ -90,7 +90,7 @@ print("flame speeds are:")
 print(flame_speeds)
 
 
-with open('NK_2_BTP_120sp.csv', 'w+') as g:
+with open('NK_2_BTP_145sp.csv', 'w+') as g:
     g.write(directory)
     g.write('\n')
     writers = csv.writer(g)
