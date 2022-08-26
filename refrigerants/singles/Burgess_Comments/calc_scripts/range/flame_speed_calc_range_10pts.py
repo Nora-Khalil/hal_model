@@ -9,13 +9,24 @@ import numpy as np
 import pandas as pd
 import os
 import csv 
+import sys
+import re
+
+
 print("Running Cantera Version: " + str(ct.__version__))
+
 
 To = 298
 Po = ct.one_atm
-directory = '/scratch/westgroup/David/halogen_models/rmg_combustion_paper_FFCM/suppressants/2-BTP/chemkin/copies/copy_chem_130.cti'
-gas = ct.Solution(directory)
+#directory = '/work/westgroup/nora/Code/projects/halogens/refrigerants/singles/Burgess_Comments/cantera/Nora/2_BTP/FFCM_seed/2_BTP_seed/chemkin/copies/copy_chem0145.cti'\
 
+model_number = sys.argv[1]
+
+match = re.search('copy_chem([0-9]+).cti', model_number)
+
+directory = f'{model_number}'
+
+gas = ct.Solution(directory)
 
 BTPmole_list = list(np.linspace(0.0, 0.16268, 10))#### for this run, this is not really volume fraction. This value is the moles of BTP (normalized to oxygen) volume fraction can be found on line 45 
 
@@ -90,7 +101,7 @@ print("flame speeds are:")
 print(flame_speeds)
 
 
-with open('D_2_BTP_130sp.csv', 'w+') as g:
+with open(f'DV_rerun_{match.group(1)}.csv', 'w+') as g:
     g.write(directory)
     g.write('\n')
     writers = csv.writer(g)
