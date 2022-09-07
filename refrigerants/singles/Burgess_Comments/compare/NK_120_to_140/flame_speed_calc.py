@@ -22,9 +22,11 @@ Po = ct.one_atm
 
 model_number = sys.argv[1]
 
-match = re.search('copy_chem([0-9]+).cti', model_number)
+#match = re.search('copy_chem([0-9]+).cti', model_number)
 
 directory = f'{model_number}'
+
+file_name = directory.split('/')
 
 
 gas = ct.Solution(directory)
@@ -59,17 +61,24 @@ for i in  range(len(BTPmole_list)):
         flame.flame.set_transient_tolerances(default=tol_ts)
         #flame.set_refine_criteria(ratio=3, slope=0.1, curve=0.1) 
         flame.set_refine_criteria(ratio=5, slope=0.25, curve=0.27)
-        flame.max_time_step_count = 900
-        loglevel = 1 
+	#flame.max_time_step_count = 900
+        flame.max_time_step_count = 1200
+        loglevel = 1
 
         ######################################################################################
-        if i!=0:
-             d = f'./data/range10pts_test_{BTPmole_list[i-1]}.csv'
-             if os.path.exists(d):  
-                 arr2 = ct.SolutionArray(gas)
-                 arr2.read_csv(d)
-                 flame.set_initial_guess(data=arr2)
-                 print(' initial guess has been set')
+       # try:
+        
+        #    if i!=0:
+        #         d = f'./data/range10pts_130-129_{BTPmole_list[i-1]}.csv'
+        #         if os.path.exists(d):  
+        #             arr2 = ct.SolutionArray(gas)
+        #             arr2.read_csv(d)
+        #             flame.set_initial_guess(data=arr2)
+        #             print(' initial guess has been set')
+                    
+       # except Exception as e: 
+        #    print(f'***************ran into error: {e}, will be calculating from scratch********')
+         #   pass 
         #######################################################################################        
 
         #"False" stops the calculation from retrying over and over, thanks Chao 
@@ -81,7 +90,7 @@ for i in  range(len(BTPmole_list)):
         sltn = flame.to_solution_array()
         df1 = sltn.to_pandas()
         #edited this here!! index=False
-        df1.to_csv(f'./data/range10pts_test_{x}.csv', index=False)
+        df1.to_csv(f'./data/range10pts_130-129_{x}.csv', index=False)
     except Exception as e: 
         print(f'********************passed BTP mole:{BTPmole_list[i]}, error: {e}*************************************')
         pass
@@ -98,7 +107,7 @@ print("flame speeds are:")
 print(flame_speeds)
 
 
-with open(f'par_flame_speeds_{match.group(1)}.csv', 'w+') as g:
+with open(f'flame_speeds_{file_name[-1]}.csv', 'w+') as g:
     g.write(directory)
     g.write('\n')
     writers = csv.writer(g)

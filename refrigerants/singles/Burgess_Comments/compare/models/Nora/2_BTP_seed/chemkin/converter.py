@@ -29,9 +29,9 @@ os.system('source activate cantera_env') #if on discovery, will be cantera 2.5
 os.makedirs('copies', exist_ok=True)
 
 #copy chem.inp file into dups folder, and will then convert this copy into .cti
-os.command = f'scp chem0129.inp copies/copy_chem0129.inp'
+os.command = f'scp chem0133.inp copies/copy_chem0133.inp'
 os.system(os.command)
-os.system('scp tran.dat copies/tran_129.dat')
+os.system('scp tran.dat copies/tran_0133.dat')
 
 #now look in the dups folder
 os.chdir('./copies')
@@ -49,7 +49,7 @@ os.chdir('./copies')
 x = 0
 while x == 0: 
 #this is a string of the output when I try to convert this file to a cti file. Will probably produce an error
-    output = getoutput( f'ck2cti --input=copy_chem0129.inp --transport=tran_129.dat') 
+    output = getoutput( f'ck2cti --input=copy_chem0133.inp --transport=tran_0133.dat') 
     #if command passed without an error
     if re.search('PASSED',output):
         print('**************************command passed, converting to cti***************************')
@@ -64,7 +64,7 @@ while x == 0:
             print(f'Unmarked duplicates on lines {match.group(1)} and {match.group(2)}')
             print('Editing chemkin file to allow conversion to .cti')
             #write the lines of the chemkin input file to a list so that I can insert the "DUPLICATE" statement
-            with open('copy_chem0129.inp','r') as f:
+            with open('copy_chem0133.inp','r') as f:
                 data = f.readlines()
                 print(data[line_numbers[0]-1], data[line_numbers[1]-1])
 
@@ -88,7 +88,7 @@ while x == 0:
                         data.insert(start,'DUPLICATE')
                         count = 1 
             #now overwrite the input file with the change 
-            with open(f'copy_chem0129.inp','w+') as f: 
+            with open(f'copy_chem0133.inp','w+') as f: 
                 for l in data: 
                     f.write(l)
                     x==0
