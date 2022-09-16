@@ -61,7 +61,7 @@ for i in  range(len(BTPmole_list)):
         flame.flame.set_transient_tolerances(default=tol_ts)
         #flame.set_refine_criteria(ratio=3, slope=0.1, curve=0.1) 
         flame.set_refine_criteria(ratio=5, slope=0.25, curve=0.27)
-	#flame.max_time_step_count = 900
+        #flame.max_time_step_count = 900
         flame.max_time_step_count = 1200
         loglevel = 1
 
@@ -90,7 +90,7 @@ for i in  range(len(BTPmole_list)):
         sltn = flame.to_solution_array()
         df1 = sltn.to_pandas()
         #edited this here!! index=False
-        df1.to_csv(f'./data/range10pts_130-129_{x}.csv', index=False)
+        df1.to_csv(f'./data/flip_869_840_{x}.csv', index=False)
     except Exception as e: 
         print(f'********************passed BTP mole:{BTPmole_list[i]}, error: {e}*************************************')
         pass
