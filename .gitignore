@@ -6,6 +6,10 @@ pdep/
 solver/
 seed/
 rms/
+*.log
+*.csv
+*.png
+*.dot
 
 # Mac stuff
 .DS_Store
