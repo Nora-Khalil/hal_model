@@ -1,0 +1,3 @@
+Added 74 out of 182 (40.7%) unique species from model #2.
+Added 2807 out of 5265 (53.3%) unique reactions from model #2.
+The merged model has 254 species and 8429 reactions
