@@ -1594,6 +1594,7 @@ CH2CHO(35)(+M)=CO(13)+CH3(19)(+M)                   2.930e+12 0.290     40.326
 H2(8)/2.00/ H2O(3)/6.00/ CO(13)/1.50/ CO2(14)/2.00/ CH4(4)/2.00/ CH2O(20)/2.50/ CH3OH(26)/3.00/ C2H2(23)/3.00/ C2H4(30)/3.00/ C2H6(31)/3.00/ 
     LOW/ 2.340e+27 -3.180    33.445   /
     TROE/ 2.110e-01 199       2.03e+03  1.12e+05 /
+DUPLICATE
 
 ! Reaction index: Chemkin #193; RMG #205
 ! Library reaction: FFCM1(-)
@@ -3978,6 +3979,7 @@ CH2CHO(35)(+M)=CO(13)+CH3(19)(+M)                   1.000e+00 0.000     0.000
     CHEB/ -2.061e-01   1.115e-01    2.980e-02    -3.531e-03  /
     CHEB/ -9.101e-02   1.381e-02    1.647e-02    1.848e-03   /
     CHEB/ -2.729e-02   -8.819e-03   2.650e-03    1.844e-03   /
+DUPLICATE
 
 ! Reaction index: Chemkin #436; RMG #2206
 ! PDep reaction: PDepNetwork #210

@@ -8307,6 +8307,7 @@ O(7)+S(1027)(+M)=O2(177)+C2HF(57)(+M)               1.000e+00 0.000     0.000
     CHEB/ -4.118e-02   5.959e-05    4.216e-05    2.403e-05   /
     CHEB/ -1.179e-02   -1.389e-04   -9.611e-05   -5.283e-05  /
     CHEB/ -1.575e-03   -6.844e-05   -4.753e-05   -2.629e-05  /
+DUPLICATE
 
 ! Reaction index: Chemkin #737; RMG #13880
 ! PDep reaction: PDepNetwork #1082
@@ -8739,6 +8740,7 @@ O(7)+S(1027)(+M)=O2(177)+C2HF(57)(+M)               1.000e+00 0.000     0.000
     CHEB/ -5.853e-02   5.619e-04    3.903e-04    2.160e-04   /
     CHEB/ -2.370e-02   5.968e-05    4.219e-05    2.402e-05   /
     CHEB/ -9.899e-03   -3.033e-05   -2.070e-05   -1.112e-05  /
+DUPLICATE
 
 ! Reaction index: Chemkin #777; RMG #14059
 ! PDep reaction: PDepNetwork #1081
